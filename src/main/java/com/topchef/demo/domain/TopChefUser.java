@@ -8,13 +8,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Table
-@Entity
+@Table(name = "user")
+@Entity(name = "smartkitchen")
 public class TopChefUser {
     @Id
-    @Column
+    @Column(name = "u_id")
     private String userId;
 
-    @Column
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "u_name")
+    private String name;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "create_date")
+    private String createDate;
 }

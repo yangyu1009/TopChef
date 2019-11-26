@@ -6,16 +6,16 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@Table
+@Table(name = "recipe_tag")
 @IdClass(TopChefRecipeTag.RecipeTag.class)
-@Entity
+@Entity(name = "smartkitchen")
 public class TopChefRecipeTag {
     @Id
-    @Column
+    @Column(name = "r_id")
     private String recipeId;
 
     @Id
-    @Column
+    @Column(name = "t_id")
     private String tagId;
 
     public class RecipeTag implements Serializable{

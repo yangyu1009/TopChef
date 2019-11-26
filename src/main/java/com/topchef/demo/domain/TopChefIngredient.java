@@ -6,20 +6,20 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@Table
+@Table(name = "ingredient")
 @IdClass(TopChefIngredient.RecipeIngredient.class)
-@Entity
+@Entity(name = "smartkitchen")
 public class TopChefIngredient {
 
     @Id
-    @Column
+    @Column(name = "r_id")
     private String recipeId;
 
     @Id
-    @Column
+    @Column(name = "name")
     private String name;
 
-    @Column
+    @Column(name = "amount")
     private String amount;
 
    public class RecipeIngredient implements Serializable{

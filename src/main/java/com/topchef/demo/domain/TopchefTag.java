@@ -6,13 +6,13 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Table
-@Entity
+@Table(name = "tag")
+@Entity(name = "smartkitchen")
 public class TopchefTag {
     @Id
-    @Column
+    @Column(name = "id")
     private String tagId;
 
-    @Column
+    @Column(name = "name")
     private String name;
 }

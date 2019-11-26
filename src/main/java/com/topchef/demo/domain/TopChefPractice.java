@@ -6,22 +6,22 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@Table
+@Table(name = "practice")
 @IdClass(TopChefPractice.RecipePractice.class)
-@Entity
+@Entity(name = "smartkitchen")
 public class TopChefPractice {
     @Id
-    @Column
+    @Column(name = "r_id")
     private String recipeId;
 
     @Id
-    @Column
+    @Column(name = "indexn")
     private int index;
 
-    @Column
+    @Column(name = "description")
     private String description;
 
-    @Column
+    @Column(name = "image")
     private String image;
 
     public class RecipePractice implements Serializable{

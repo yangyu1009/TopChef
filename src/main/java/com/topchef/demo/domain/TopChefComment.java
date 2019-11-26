@@ -6,19 +6,19 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@Table
+@Table(name = "comment")
 @IdClass(TopChefPractice.RecipePractice.class)
-@Entity
+@Entity(name = "smartkitchen")
 public class TopChefComment {
     @Id
-    @Column
+    @Column(name = "u_id")
     private String userId;
 
     @Id
-    @Column
+    @Column(name = "r_id")
     private String recipeId;
 
-    @Column
+    @Column(name = "description")
     private String description;
 
     public class Comment implements Serializable{

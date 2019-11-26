@@ -8,29 +8,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Table
-@Entity
+@Table(name = "recipe")
+@Entity(name = "smartkitchen")
 public class TopChefRecipe {
 
     @Id
-    @Column
+    @Column(name = "r_id")
     private String recipeId;
 
-    Column
+    @Column(name = "r_name")
     private String recipeName;
 
-    Column
+    @Column(name = "description")
     private String description;
 
-    Column
+    @Column(name = "image")
     private String image;
 
-    Column
+    @Column(name = "S_number")
     private int sNumber;
 
-    Column
+    @Column(name = "V_number")
     private int vNumber;
 
-    Column
+    @Column(name = "Pub_time")
     private String publishTime;
+
+    @Column(name = "u_id")
+    private String userId;
 }
