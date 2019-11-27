@@ -128,7 +128,7 @@ div#slider figure {
 }
 
 .fixSlideSize {
-  height: 50vh;
+  height: 35vh;
   width: 40vw;
 }
 .noPadding {
@@ -150,3 +150,13 @@ div#slider figure {
  .ui.avatar.image {
    margin-left: 15%;
  }
+
+body > .grid {
+  height: 100%;
+}
+.image {
+  margin-top: -100px;
+}
+.column {
+  max-width: 450px;
+}

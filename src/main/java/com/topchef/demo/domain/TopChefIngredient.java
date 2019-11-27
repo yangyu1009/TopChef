@@ -8,7 +8,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "ingredient")
 @IdClass(TopChefIngredient.RecipeIngredient.class)
-@Entity(name = "smartkitchen")
+@Entity
 public class TopChefIngredient {
 
     @Id

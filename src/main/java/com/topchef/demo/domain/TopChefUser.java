@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Data
 @Table(name = "user")
-@Entity(name = "smartkitchen")
+@Entity
 public class TopChefUser {
     @Id
     @Column(name = "u_id")

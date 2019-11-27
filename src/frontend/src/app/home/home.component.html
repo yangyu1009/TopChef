@@ -27,7 +27,7 @@
   <div class="pusher">
 
 
-    <div class="ui segment" style="width: 80%">
+    <div class="ui segment" style="width: 80%; margin-top: 15px">
       <div style="margin-left: 15px; ">
         <h2>BEST CHEFS TODAY</h2>
       </div>
@@ -62,8 +62,9 @@
       </div>
     </div>
 
-
-<div class="ui grid" style="margin-left: -15px;margin-top: 20px;">
+<div class="ui horizontal segments" style="width: 80%; height: 400px" >
+  <div class="ui segment" style="width: 35%;">
+<div class="ui grid" style="margin-left: -15px;margin-top: 20px; margin-bottom: 20px; ">
 
 <ngb-carousel *ngIf="images">
 
@@ -91,6 +92,43 @@
   </ng-template>
 
 </ngb-carousel>
+</div>
+  </div>
+<div class="ui segment" style="margin-left: 20px; width: 30%">
+    <div class="ui middle aligned center aligned grid" style="width: 90%">
+      <div class="column">
+        <h2 class="ui image header">
+          <div class="content">
+            Log-in to your account
+          </div>
+        </h2>
+        <form action="https://s.codepen.io/voltron2112/debug/PqrEPM?" method="get" class="ui large form" style="margin-left: 50px">
+          <div class="ui stacked secondary  segment">
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="email" placeholder="E-mail address">
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="password" name="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="ui fluid large teal submit button">Login</div>
+          </div>
+
+          <div class="ui error message"></div>
+
+        </form>
+
+        <div class="ui message" style="margin-left: 50px">
+          New to us? <a href="https://s.codepen.io/voltron2112/debug/PqrEPM?">Register</a>
+        </div>
+      </div>
+    </div>
+</div>
 </div>
 
 
@@ -122,6 +160,7 @@
 
 
     </div>
+</div>
 
 
 

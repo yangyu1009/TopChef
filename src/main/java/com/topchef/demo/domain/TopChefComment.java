@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @Table(name = "comment")
-@IdClass(TopChefPractice.RecipePractice.class)
+@IdClass(TopChefComment.Comment.class)
 @Entity(name = "smartkitchen")
 public class TopChefComment {
     @Id

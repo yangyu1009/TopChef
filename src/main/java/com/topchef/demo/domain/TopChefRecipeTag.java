@@ -8,7 +8,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "recipe_tag")
 @IdClass(TopChefRecipeTag.RecipeTag.class)
-@Entity(name = "smartkitchen")
+@Entity
 public class TopChefRecipeTag {
     @Id
     @Column(name = "r_id")

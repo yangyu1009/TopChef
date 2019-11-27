@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Data
 @Table(name = "recipe")
-@Entity(name = "smartkitchen")
+@Entity
 public class TopChefRecipe {
 
     @Id

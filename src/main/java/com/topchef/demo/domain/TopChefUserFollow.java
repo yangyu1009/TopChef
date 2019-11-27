@@ -8,7 +8,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "user_follow")
 @IdClass(TopChefUserFollow.PublishFollower.class)
-@Entity(name = "smartkitchen")
+@Entity
 public class TopChefUserFollow {
     @Id
     @Column(name = "p_id")

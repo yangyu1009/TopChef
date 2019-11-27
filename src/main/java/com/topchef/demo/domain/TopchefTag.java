@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Data
 @Table(name = "tag")
-@Entity(name = "smartkitchen")
+@Entity
 public class TopchefTag {
     @Id
     @Column(name = "id")
