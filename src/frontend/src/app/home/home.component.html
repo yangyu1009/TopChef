@@ -1,1 +1,170 @@
-<p>home works!</p>
+<div class="ui bottom attached segment pushable">
+  <div class="ui visible left vertical sidebar menu">
+    <a class="item">
+      <!--<i class="home icon"></i>-->
+
+      <!--<h3 class="ui right aligned header">-->
+      <!--<img class="ui tiny circular image" src="assets/images/home_pic1.jpg">-->
+      <!--FISH-->
+      <!--</h3>-->
+      <img class="ui avatar image" src="assets/images/fish_icon.png">
+      <span class="categoryName">Fish</span>
+
+    </a>
+    <a class="item">
+      <img class="ui avatar image" src="assets/images/chicken.png">
+      <span class="categoryName">Meet</span>
+    </a>
+    <a class="item">
+      <img class="ui avatar image" src="assets/images/veggie.png">
+      <span class="categoryName">Vegetable</span>
+    </a>
+    <a class="item">
+      <img class="ui avatar image" src="assets/images/dessert.png">
+      <span class="categoryName">Dessert</span>
+    </a>
+  </div>
+  <div class="pusher">
+
+
+    <div class="ui segment" style="width: 80%">
+      <div style="margin-left: 15px; ">
+        <h2>BEST CHEFS TODAY</h2>
+      </div>
+      <div class="ui grid" style="margin-left: 15px;">
+        <div class="row stretched">
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic1.jpg" style="object-fit: fill" routerLink="/game" routerLinkActive="active">
+          </div>
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic2.jpg" style="object-fit: fill" routerLink="/toy" routerLinkActive="active">
+          </div>
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic3.jpg" style="object-fit: fill" routerLink="/jewelry" routerLinkActive="active">
+          </div>
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic3.jpg" style="object-fit: fill" routerLink="/jewelry" routerLinkActive="active">
+          </div>
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic1.jpg" style="object-fit: fill" routerLink="/game" routerLinkActive="active">
+          </div>
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic2.jpg" style="object-fit: fill" routerLink="/toy" routerLinkActive="active">
+          </div>
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic3.jpg" style="object-fit: fill" routerLink="/jewelry" routerLinkActive="active">
+          </div>
+          <div class="two wide column noPadding">
+            <img src="assets/images/home_pic3.jpg" style="object-fit: fill" routerLink="/jewelry" routerLinkActive="active">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+<div class="ui grid" style="margin-left: -15px;margin-top: 20px;">
+
+<ngb-carousel *ngIf="images">
+
+  <ng-template ngbSlide>
+
+    <img src="assets/images/home_pic1.jpg" alt="Random first slide" class="fixSlideSize" routerLink="/item" routerLinkActive="active">
+    <div class="carousel-caption">
+      <h3>Fast Food</h3>
+      <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="assets/images/home_pic2.jpg" alt="Random third slide" class="fixSlideSize" routerLink="/item" routerLinkActive="active">
+    <div class="carousel-caption">
+      <h3>Chinese Food</h3>
+      <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="assets/images/home_pic3.jpg" alt="Random second slide" class="fixSlideSize" routerLink="/item" routerLinkActive="active">
+    <div class="carousel-caption">
+      <h3>Dessert</h3>
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+    </div>
+  </ng-template>
+
+</ngb-carousel>
+</div>
+
+
+
+
+    <div class="ui segments" style="width: 80%">
+      <div class="ui segment">
+        <div style="margin-left: 15px">
+          <h2>BEST RECIPES TODAY</h2>
+        </div>
+        <div class="ui grid" style="margin-left: 15px; margin-right: 0px">
+          <div class="row stretched">
+            <div class="four wide column noPadding">
+              <img src="assets/images/home_pic1.jpg" style="object-fit: fill" routerLink="/cloth" routerLinkActive="active">
+            </div>
+            <div class="four wide column noPadding">
+              <img src="assets/images/home_pic2.jpg" style="object-fit: fill" routerLink="/book" routerLinkActive="active">
+            </div>
+            <div class="four wide column noPadding">
+              <img src="assets/images/home_pic3.jpg" style="object-fit: fill" routerLink="/purse" routerLinkActive="active">
+            </div>
+            <div class="four wide column noPadding">
+              <img src="assets/images/home_pic3.jpg" style="object-fit: fill" routerLink="/purse" routerLinkActive="active">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!--&lt;!&ndash;<base>&ndash;&gt;-->
+<!--<div class="ui raised segment" >-->
+  <!--<div style="margin-left: 10px">-->
+    <!--<h2>BEST SALES </h2>-->
+  <!--</div>-->
+  <!--<div class="ui three column wide grid" style="margin-left: 15px">-->
+    <!--<div class="row">-->
+      <!--<div class="column">-->
+        <!--<img src="/assets/image/dress_sq.jpg" width="115%" routerLink="/cloth" routerLinkActive="active">-->
+        <!--<p>Cloth</p>-->
+      <!--</div>-->
+      <!--<div class="column">-->
+        <!--<img src="/assets/image/book_sq.png" width="115%" routerLink="/book" routerLinkActive="active">-->
+        <!--<p>Books</p>-->
+      <!--</div>-->
+      <!--<div class="column">-->
+        <!--<img src="/assets/image/bag_sq.jpg" width="115%" routerLink="/purse" routerLinkActive="active">-->
+        <!--<p>Bag</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="column">-->
+        <!--<img src="/assets/image/games_sq.jpg" width="115%" routerLink="/game" routerLinkActive="active">-->
+        <!--<p>Games</p>-->
+      <!--</div>-->
+      <!--<div class="column">-->
+        <!--<img src="/assets/image/toy_sq.jpg" width="115%" routerLink="/toy" routerLinkActive="active">-->
+        <!--<p>Toy</p>-->
+      <!--</div>-->
+      <!--<div class="column">-->
+        <!--<img src="/assets/image/jew_sq.jpg" width="115%" routerLink="/jewelry" routerLinkActive="active">-->
+        <!--<p>Jewelry</p>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
