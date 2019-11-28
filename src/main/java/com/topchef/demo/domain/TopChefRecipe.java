@@ -36,4 +36,5 @@ public class TopChefRecipe {
 
     @Column(name = "u_id")
     private String userId;
+
 }
