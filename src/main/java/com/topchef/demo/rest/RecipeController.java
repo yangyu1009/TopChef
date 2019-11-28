@@ -1,7 +1,8 @@
 package com.topchef.demo.rest;
 
 import com.topchef.demo.dto.RecipeDto;
-import com.topchef.demo.service.TopChefRecipeService;
+import com.topchef.demo.repository.TopChefRecipeDao;
+import com.topchef.demo.service.RecipeService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -9,18 +10,19 @@ import java.util.List;
     @RestController
     @RequestMapping(path = "/recipe")
     public class RecipeController {
-        private TopChefRecipeService topChefRecipeService;
+        private RecipeService recipeService;
 
-        public RecipeController(TopChefRecipeService topChefRecipeService) {
-            this.topChefRecipeService = topChefRecipeService;
+        public RecipeController(RecipeService recipeService) {
+            this.recipeService = recipeService;
         }
+
         @GetMapping(path = "/all")
-        public List<RecipeDto> getAllRecipes() {
-        return topChefRecipeService.getAllRecipes();
+        public List<RecipeDto> findAllRecipes() {
+        return recipeService.findAllRceipes();
     }
-        @GetMapping(path = "/{recipeId}")
-        public RecipeDto getOneItem(@PathVariable("recipeId") String recipeId) {
-            return topChefRecipeService.getRecipe(recipeId);
-        }
+    @GetMapping(path = "/{recipeId}")
+        public RecipeDto getRecipeById(@PathVariable("recipeId") String recipeId){
+            return recipeService.getRecipeById(recipeId);
+    }
     }
 
