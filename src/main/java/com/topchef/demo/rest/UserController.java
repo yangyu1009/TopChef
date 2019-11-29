@@ -1,16 +1,9 @@
 package com.topchef.demo.rest;
 
-import com.topchef.demo.domain.TopChefUser;
-import com.topchef.demo.dto.RecipeDto;
-import com.topchef.demo.dto.UserDto;
+import com.topchef.demo.dto.CreateRecipeDto;
 import com.topchef.demo.service.TopChefUserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -21,8 +14,9 @@ public class UserController {
     public UserController(TopChefUserService topChefUserService) {
         this.topChefUserService = topChefUserService;
     }
-    @GetMapping(path = "/all")
-    public List<UserDto> getAllItems() {
-        return topChefUserService.getAllUserInfo();
+
+    @PostMapping(value = "/createRecipe")
+    public void createRecipe(CreateRecipeDto createRecipe){
+        topChefUserService.createCecipe(createRecipe);
     }
 }
