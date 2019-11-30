@@ -5,7 +5,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class FollowerDto {
-    private String publishId;
+public class PublisherAndFollowerDto {
     private String followerId;
+    private String publisherId;
+    private String followerName;
 }

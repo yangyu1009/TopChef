@@ -2,9 +2,8 @@ package com.topchef.demo.service;
 
 
 import com.topchef.demo.dto.CreateRecipeDto;
-import com.topchef.demo.dto.ShowFollowerDto;
-import com.topchef.demo.mapper.UserFollowMapper;
-import com.topchef.demo.mapper.UserFollowedMapper;
+import com.topchef.demo.dto.PublisherAndFollowerDto;
+import com.topchef.demo.mapper.PublisherAndFollowerMapper;
 import com.topchef.demo.repository.TopChefUserDao;
 import com.topchef.demo.utils.CreateTimeUtils;
 import com.topchef.demo.utils.IDUtils;
@@ -38,35 +37,35 @@ public class TopChefTopChefUserService implements TopChefUserDao {
         }
     }
 
+    //-------------------------------------------------------------------------------------------------------------------------------------------------
+    //get publisherList or FollowerList
     @Override
-    public List<ShowFollowerDto> getFollowerList(String userId) {
-        String sql ="select f_id, u_name from user_follow, user where p_id=? and f_id = u_id";
-        List<ShowFollowerDto> followers = jdbcTemplateObject.query(sql, new Object[]{userId}, new UserFollowMapper());
-        return followers.stream()
-                .map(follower -> {
-                    ShowFollowerDto dto = new ShowFollowerDto();
-                    BeanUtils.copyProperties(follower, dto);
-                    return dto;
-                })
-                .collect(Collectors.toList());
+    public List<PublisherAndFollowerDto> getFollowerList(String userId) {
+        String sql ="select f_id, p_id, u_name from user_follow, user where p_id=? and f_id = u_id";
+        return getPublisherAndFollowerDtos(userId, sql);
     }
 
     @Override
-    public List<ShowFollowerDto> getPublisherList(String userId) {
-        String sql ="select p_id, u_name from user_follow, user where f_id=? and p_id = u_id";
-        List<ShowFollowerDto> publishers = jdbcTemplateObject.query(sql, new Object[]{userId}, new UserFollowedMapper());
+    public List<PublisherAndFollowerDto> getPublisherList(String userId) {
+        String sql ="select p_id, f_id, u_name from user_follow, user where f_id=? and p_id = u_id";
+        return getPublisherAndFollowerDtos(userId, sql);
+    }
+
+    private List<PublisherAndFollowerDto> getPublisherAndFollowerDtos(String userId, String sql) {
+        List<PublisherAndFollowerDto> publishers = jdbcTemplateObject.query(sql, new Object[]{userId}, new PublisherAndFollowerMapper());
         return publishers.stream()
                 .map(publisher -> {
-                    ShowFollowerDto dto = new ShowFollowerDto();
+                    PublisherAndFollowerDto dto = new PublisherAndFollowerDto();
                     BeanUtils.copyProperties(publisher, dto);
                     return dto;
                 })
                 .collect(Collectors.toList());
     }
+    //-------------------------------------------------------------------------------------------------------------------------------------------------
 
     @Override
     public void deleteRecipe(String recipeId) {
-        String sql ="delete from recipe where r_id = ?)";
+        String sql ="delete from recipe where r_id = ?";
         jdbcTemplateObject.update(sql, recipeId);
     }
 

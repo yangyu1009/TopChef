@@ -1,8 +1,7 @@
 package com.topchef.demo.repository;
 
 import com.topchef.demo.dto.CreateRecipeDto;
-import com.topchef.demo.dto.FollowerDto;
-import com.topchef.demo.dto.ShowFollowerDto;
+import com.topchef.demo.dto.PublisherAndFollowerDto;
 
 import java.util.List;
 
@@ -11,10 +10,10 @@ public interface TopChefUserDao {
     public void createRecipe(CreateRecipeDto createRecipe);
 
     //get follower list
-    public List<ShowFollowerDto> getFollowerList(String userId);
+    public List<PublisherAndFollowerDto> getFollowerList(String userId);
 
     //get follower list
-    public List<ShowFollowerDto> getPublisherList(String userId);
+    public List<PublisherAndFollowerDto> getPublisherList(String userId);
 
     // delete recipe
     public void deleteRecipe(String recipeId);

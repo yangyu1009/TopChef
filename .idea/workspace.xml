@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93a993e-224c-4b59-91f6-31eb37e97c8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/ShowFollowerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/SubscribeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/SubscribeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowedMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/FollowerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/FollowerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/FollowerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/ShowFollowerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/PublisherAndFollowerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/PublisherAndFollowerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowedMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/CreateRecipeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefRecipeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/dto/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefRecipeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefUserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/dto/FollowerDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/dto/ShowFollowerDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/mapper/UserFollowMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/mapper/UserFollowedMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefUserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/rest/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/rest/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/TopChefRecipeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/TopChefUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/TopChefTopChefUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/TopChefTopChefUserService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+            <state relative-caret-position="247">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#552#553#0" expanded="true" />
@@ -116,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-97">
-              <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+            <state relative-caret-position="53">
+              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,22 +121,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowedMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state relative-caret-position="176">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/PublisherAndFollowerMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,11 +156,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="391">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,10 +169,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/ShowFollowerDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/PublisherAndFollowerDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="154">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,7 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/domain/TopChefComment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/domain/TopChefIngredient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/domain/TopChefPractice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/domain/TopChefRecipeTag.java" />
@@ -247,14 +244,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/userFollowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/FollowerDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowedMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/ShowFollowerDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserPublisherMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/PublisherAndFollowerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java" />
       </list>
     </option>
   </component>
@@ -377,6 +375,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574846489243" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/src/frontend/node_modules/protractor" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -453,12 +452,12 @@
       <workItem from="1574897353457" duration="8085000" />
       <workItem from="1574914148638" duration="2180000" />
       <workItem from="1574918953092" duration="952000" />
-      <workItem from="1574933649921" duration="29816000" />
+      <workItem from="1574933649921" duration="30946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56004000" />
+    <option name="totallyTimeSpent" value="57134000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -858,26 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/FollowerDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/RecipeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -902,37 +881,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/ShowFollowerDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserPublisherMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowedMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -963,20 +915,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowedMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        <state relative-caret-position="88">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/FollowerDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/PublisherAndFollowerDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="154">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/PublisherAndFollowerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -985,14 +974,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+        <state relative-caret-position="247">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#552#553#0" expanded="true" />
             <element signature="e#600#601#0" expanded="true" />
             <element signature="e#1282#1283#0" expanded="true" />
             <element signature="e#1331#1332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
