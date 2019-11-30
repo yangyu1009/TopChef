@@ -3,13 +3,9 @@ package com.topchef.demo.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @NoArgsConstructor
-public class UserDto {
+public class SubscribeDto {
     private String userId;
-    private String password;
-    private String name;
-    private String email;
-    private String createDate;
+    private String recipeId;
 }
