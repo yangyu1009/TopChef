@@ -95,7 +95,6 @@ public class TableSearchService implements TableSearchDao {
     public RecipeDto getRecipeByRecipeId(String recipeId) {
         String sql ="select * from recipe where r_id=?";
         RecipeDto recipe = jdbcTemplateObject.queryForObject(sql,new Object[]{recipeId}, new RecipeMapper());
-        jdbcTemplateObject.update(sql, recipeId);
         return recipe;
     }
 
@@ -127,7 +126,7 @@ public class TableSearchService implements TableSearchDao {
 
     @Override
     public List<PracticeDto> getAllPracticesByRecipeId(String recipeId) {
-        String sql = "select * from practice where r_id=?";
+        String sql = "select * from practice where r_id=? order by indexn";
         List<PracticeDto> practices = jdbcTemplateObject.query(sql,new Object[]{recipeId} ,new PracticeMapper());
         return practices.stream()
                 .map(practice -> {

@@ -3,6 +3,7 @@ package com.topchef.demo.dto.handlesEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class RecipeDetailDto {
     private String recipeName;
     private String image;
     private String description;
+    private String publishTime;
     private int v_number;
     private int s_number;
 
@@ -22,11 +24,9 @@ public class RecipeDetailDto {
     private String userName;
 
     //ingredient
-    private HashMap<String, String> ingredient;
+    private HashMap<String, String> ingredient = new HashMap<>();
+
 
     //practice
-    private List<String> practiceImage;
-    private List<String> practiceDescription;
-    private List<String> practice;
-    private String tag;
+    private List<List<String>> practice = new ArrayList<>();
 }
