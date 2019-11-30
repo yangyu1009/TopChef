@@ -29,7 +29,7 @@ export class ItemComponent implements OnInit {
     // });
     try {
 
-      this.list = await axios.get("http://localhost:5005/book/user/0000031887").then(function(response){
+      this.list = await axios.get("http://localhost:5005/recipe/5160756f96cc6207a37ff777").then(function(response){
 
         var detail;
         detail = response.data;
