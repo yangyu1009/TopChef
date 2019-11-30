@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93a993e-224c-4b59-91f6-31eb37e97c8a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RegisterDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/RecipeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/RecipeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TableSearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TableSearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefRecipeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefRecipeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/repository/TopChefUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/rest/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/rest/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/RecipeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/RecipeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/TableSearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/TableSearchService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/UserHandlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/UserHandlesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,99 +40,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java">
+        <entry file="file://$PROJECT_DIR$/src/frontend/src/app/home/home.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1571">
-              <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+            <state relative-caret-position="-171">
+              <caret line="104" column="57" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/RecipeService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RegisterDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="242">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#810#811#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/tableEntity/IngredientDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="82" column="205" selection-start-line="82" selection-start-column="205" selection-end-line="82" selection-end-column="205" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar!/org/springframework/transaction/interceptor/DelegatingTransactionAttribute.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar!/org/springframework/transaction/interceptor/RuleBasedTransactionAttribute.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.2.1.RELEASE/spring-jcl-5.2.1.RELEASE.jar!/org/apache/commons/logging/LogAdapter.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="133" column="41" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/Logger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="618" selection-start-line="618" selection-end-line="618" />
+            <state relative-caret-position="424">
+              <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
               <folding>
-                <element signature="e#21272#21273#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/LoggerContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="266" selection-start-line="266" selection-end-line="266" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -165,8 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/TopChefRecipeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/TopChefFollowerMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/CreateRecipeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/CreateRecipeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/CreateRecipeMapper.java" />
@@ -207,15 +134,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TableSearchDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/tableEntity/UserFollowDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/mapper/UserFollowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefRecipeDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/BookController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/TableSearchService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/RecipeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/RecipeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RegisterDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" />
+        <option value="$PROJECT_DIR$/src/frontend/src/app/home/home.component.html" />
       </list>
     </option>
   </component>
@@ -259,6 +188,36 @@
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="TopChef" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TopChef" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TopChef" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TopChef" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TopChef" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -294,16 +253,6 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
               <item name="handlesEntity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TopChef" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-              <item name="tableEntity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -387,7 +336,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TopChefApplication">
+  <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="E2E Tests" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/src/frontend/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -437,12 +386,12 @@
       <workItem from="1574918953092" duration="952000" />
       <workItem from="1574933649921" duration="41290000" />
       <workItem from="1575141003119" duration="509000" />
-      <workItem from="1575141656484" duration="13148000" />
+      <workItem from="1575141656484" duration="15831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81135000" />
+    <option name="totallyTimeSpent" value="83818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,7 +403,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1945629" />
@@ -509,15 +458,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/AmazonBookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/tableEntity/CommentDto.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/tableEntity/RecipeDto.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/tableEntity/RecipeTagDto.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/tableEntity/SubscribeDto.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/tableEntity/TagDto.java" />
@@ -681,16 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefRecipeDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -744,16 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1162">
-          <caret line="73" column="53" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,24 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar!/org/springframework/transaction/interceptor/DelegatingTransactionAttribute.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar!/org/springframework/transaction/interceptor/RuleBasedTransactionAttribute.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -873,10 +779,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RecipeDetailDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/repository/TopChefUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1571">
-          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+        <state relative-caret-position="409">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar!/org/springframework/transaction/interceptor/DelegatingTransactionAttribute.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/RegisterDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/src/app/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="104" column="57" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
         </state>
       </provider>
     </entry>

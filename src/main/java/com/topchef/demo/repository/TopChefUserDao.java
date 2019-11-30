@@ -1,6 +1,7 @@
 package com.topchef.demo.repository;
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
+import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
 
@@ -33,4 +34,7 @@ public interface TopChefUserDao {
 
     //get all subscribe recipe Done
     public List<RecipeDto> getAllSubscribeRecipes(String userId);
+
+    //register
+    public void register(RegisterDto registerDto);
 }

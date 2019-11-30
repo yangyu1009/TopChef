@@ -2,6 +2,7 @@ package com.topchef.demo.service;
 
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
+import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.SubscribeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
@@ -129,5 +130,11 @@ public class UserHandlesService implements TopChefUserDao {
                     BeanUtils.copyProperties(recipe, dto);
                     return dto;
                 }).collect(Collectors.toList());
+    }
+
+    @Override
+    public void register(RegisterDto registerDto) {
+        String sql = "insert into user(u_id, u_name, email, create_date, password) values(?,?,?,?,?)";
+        jdbcTemplateObject.update(sql, registerDto.getUerId(), registerDto.getUserName(), registerDto.getEmail(), registerDto.getCreateTime(), registerDto.getPassword());
     }
 }

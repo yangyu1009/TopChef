@@ -2,6 +2,8 @@ package com.topchef.demo.rest;
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
 import com.topchef.demo.dto.handlesEntity.PublisherAndFollowerDto;
+import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
+import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.SubscribeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
@@ -73,5 +75,12 @@ public class UserController {
     public String subscribeRecipe(String recipeid){
         userHandlesService.subscribeRecipe(recipeid);
         return "Subscribed!";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public void register(RegisterDto registerDto){
+        registerDto.setUerId("4399");
+        registerDto.setCreateTime("2019-12-12");
+        userHandlesService.register(registerDto);
     }
 }
