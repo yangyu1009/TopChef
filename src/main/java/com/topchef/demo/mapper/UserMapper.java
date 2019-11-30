@@ -1,6 +1,6 @@
 package com.topchef.demo.mapper;
 
-import com.topchef.demo.dto.UserDto;
+import com.topchef.demo.dto.tableEntity.UserDto;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -15,6 +15,6 @@ public class UserMapper implements RowMapper<UserDto> {
         user.setEmail(resultSet.getString("email"));
         user.setCreateDate(resultSet.getString("create_date"));
         user.setPassword(resultSet.getString("password"));
-        return null;
+        return user;
     }
 }

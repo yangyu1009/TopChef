@@ -1,17 +1,13 @@
 package com.topchef.demo.service;
 
 import com.topchef.demo.domain.AmazonBaseline;
-import com.topchef.demo.dto.ProductDetailDto;
+import com.topchef.demo.dto.handlesEntity.ProductDetailDto;
 import com.topchef.demo.exception.ItemNotFoundException;
 import com.topchef.demo.repository.AmazonBaselineRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional

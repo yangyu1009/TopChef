@@ -208,7 +208,7 @@ $.fn.visibility = function(parameters) {
             module.debug('Page finished loading');
             requestAnimationFrame(module.refresh);
           },
-          // publishes scrollchange event on one scroll
+          // publishes scrollchange event on handlesEntity scroll
           scroll: function() {
             if(settings.throttle) {
               clearTimeout(module.timer);
@@ -488,7 +488,7 @@ $.fn.visibility = function(parameters) {
             module.topPassedReverse();
             module.bottomPassedReverse();
 
-            // one time
+            // handlesEntity time
             module.onScreen();
             module.offScreen();
             module.passing();
@@ -1232,7 +1232,7 @@ $.fn.visibility.settings = {
   // should call callbacks on refresh event (resize, etc)
   checkOnRefresh         : true,
 
-  // callback should only occur one time
+  // callback should only occur handlesEntity time
   once                   : true,
 
   // callback should fire continuously whe evaluates to true

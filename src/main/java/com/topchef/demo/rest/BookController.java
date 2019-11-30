@@ -1,10 +1,8 @@
 package com.topchef.demo.rest;
 
-import com.topchef.demo.dto.ProductDetailDto;
+import com.topchef.demo.dto.handlesEntity.ProductDetailDto;
 import com.topchef.demo.service.AmazonBookService;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @CrossOrigin
 @RestController
