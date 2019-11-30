@@ -2,6 +2,8 @@ package com.topchef.demo.repository;
 
 import com.topchef.demo.dto.CreateRecipeDto;
 import com.topchef.demo.dto.PublisherAndFollowerDto;
+import com.topchef.demo.dto.RecipeDto;
+import com.topchef.demo.dto.SubscribeDto;
 
 import java.util.List;
 
@@ -29,4 +31,10 @@ public interface TopChefUserDao {
 
     // judge whether this recipe is followed or not
     public boolean subscribeOrNot(String recipeId);
+
+    //get all recipe by user id
+    public List<RecipeDto> getAllRecipesByUserId(String userId);
+
+    //get all subscribe recipe
+    public List<SubscribeDto> getAllSubscribeRecipes(String userId);
 }

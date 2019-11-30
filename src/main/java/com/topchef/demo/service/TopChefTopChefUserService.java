@@ -3,7 +3,11 @@ package com.topchef.demo.service;
 
 import com.topchef.demo.dto.CreateRecipeDto;
 import com.topchef.demo.dto.PublisherAndFollowerDto;
+import com.topchef.demo.dto.RecipeDto;
+import com.topchef.demo.dto.SubscribeDto;
 import com.topchef.demo.mapper.PublisherAndFollowerMapper;
+import com.topchef.demo.mapper.SubscribeMapper;
+import com.topchef.demo.mapper.TopChefRecipeMapper;
 import com.topchef.demo.repository.TopChefUserDao;
 import com.topchef.demo.utils.CreateTimeUtils;
 import com.topchef.demo.utils.IDUtils;
@@ -98,6 +102,32 @@ public class TopChefTopChefUserService implements TopChefUserDao {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<RecipeDto> getAllRecipesByUserId(String userId) {
+        String sql ="select * from recipe where u_id=?";
+        List<RecipeDto> recipes = jdbcTemplateObject.query(sql, new String[]{userId},new TopChefRecipeMapper());
+        return recipes.stream()
+                .map(recipe -> {
+                    RecipeDto dto = new RecipeDto();
+                    BeanUtils.copyProperties(recipe, dto);
+                    return dto;
+                })
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<SubscribeDto> getAllSubscribeRecipes(String userId) {
+        String sql="select s.u_id, s.r_id, r.r_name, r.image from recipe r, subscribe s where s.u_id = ? and s.r_id = r.r_id";
+        List<SubscribeDto> recipes = jdbcTemplateObject.query(sql, new String[]{userId},new SubscribeMapper());
+        return recipes.stream()
+                .map(recipe -> {
+                    SubscribeDto dto = new SubscribeDto();
+                    BeanUtils.copyProperties(recipe, dto);
+                    return dto;
+                })
+                .collect(Collectors.toList());
     }
 
 }

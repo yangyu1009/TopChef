@@ -12,6 +12,8 @@ public class SubscribeMapper implements RowMapper<SubscribeDto> {
         SubscribeDto subscribe = new SubscribeDto();
         subscribe.setUserId(resultSet.getString("u_id"));
         subscribe.setRecipeId(resultSet.getString("r_id"));
+        subscribe.setRecipeName(resultSet.getString("r_name"));
+        subscribe.setIamge(resultSet.getString("image"));
         return subscribe;
     }
 }

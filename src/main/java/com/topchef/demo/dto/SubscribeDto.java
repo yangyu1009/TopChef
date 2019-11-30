@@ -8,4 +8,6 @@ import lombok.NoArgsConstructor;
 public class SubscribeDto {
     private String userId;
     private String recipeId;
+    private String recipeName;
+    private String iamge;
 }

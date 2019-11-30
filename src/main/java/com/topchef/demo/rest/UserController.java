@@ -2,6 +2,8 @@ package com.topchef.demo.rest;
 
 import com.topchef.demo.dto.CreateRecipeDto;
 import com.topchef.demo.dto.PublisherAndFollowerDto;
+import com.topchef.demo.dto.RecipeDto;
+import com.topchef.demo.dto.SubscribeDto;
 import com.topchef.demo.service.TopChefTopChefUserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,5 +38,15 @@ public class UserController {
     @GetMapping(path = "/deleteRecipe/{recipeId}")
     public void deleteRecipe(@PathVariable("recipeId") String recipeId){
         topChefUserService.deleteRecipe(recipeId);
+    }
+
+    @GetMapping(path = "/recipeList/{userId}")
+    public List<RecipeDto> getAllRecipesByUserId(@PathVariable("userId") String userId){
+        return  topChefUserService.getAllRecipesByUserId(userId);
+    }
+
+    @GetMapping(path = "/subscribeList/{userId}")
+    public  List<SubscribeDto> getAllSubscribeRecipes(@PathVariable("userId") String userId){
+        return  topChefUserService.getAllSubscribeRecipes(userId);
     }
 }
