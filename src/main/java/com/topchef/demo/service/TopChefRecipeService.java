@@ -2,7 +2,6 @@ package com.topchef.demo.service;
 
 import com.topchef.demo.domain.TopChefRecipe;
 import com.topchef.demo.dto.RecipeDto;
-import com.topchef.demo.repository.TopChefRecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

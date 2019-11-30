@@ -36,8 +36,8 @@ public class RecipeService implements TopChefRecipeDao {
     public RecipeDto getRecipeById(String recipeId) {
         String sql ="select * from recipe where r_id=?";
         RecipeDto recipe = jdbcTemplateObject.queryForObject(sql,new Object[]{recipeId}, new TopChefRecipeMapper());
-        //RecipeDto dto = new RecipeDto();
-       // BeanUtils.copyProperties(recipe, dto);
+        sql = "update recipe set V_number= V_number+1 where r_id=?";
+        jdbcTemplateObject.update(sql, recipeId);
         return recipe;
     }
 }
