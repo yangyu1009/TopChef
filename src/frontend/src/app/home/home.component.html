@@ -94,8 +94,10 @@
 </ngb-carousel>
 </div>
   </div>
-<div class="ui segment" style="margin-left: 20px; width: 30%">
-    <div class="ui middle aligned center aligned grid" style="width: 90%">
+
+  <div class="ui segment" style="margin-left: 20px; width: 30%" [ngSwitch]="loginSuccess">
+
+      <div *ngSwitchCase="false" class="ui middle aligned center aligned grid" style="width: 90%">
       <div class="column">
         <h2 class="ui image header">
           <div class="content">
@@ -116,7 +118,7 @@
                 <input type="password" name="password" placeholder="Password">
               </div>
             </div>
-            <div class="ui fluid large teal submit button">Login</div>
+            <button (click)="onClick()" class="ui fluid large teal submit button" >Login</button>
           </div>
 
           <div class="ui error message"></div>
@@ -128,8 +130,15 @@
         </div>
       </div>
     </div>
+
+
+  <div *ngSwitchCase="true">
+    <p>Welcome!!!</p>
 </div>
+  </div>
 </div>
+
+
 
 
 
@@ -169,41 +178,6 @@
 
 
 
-    <!--&lt;!&ndash;<base>&ndash;&gt;-->
-<!--<div class="ui raised segment" >-->
-  <!--<div style="margin-left: 10px">-->
-    <!--<h2>BEST SALES </h2>-->
-  <!--</div>-->
-  <!--<div class="ui three column wide grid" style="margin-left: 15px">-->
-    <!--<div class="row">-->
-      <!--<div class="column">-->
-        <!--<img src="/assets/image/dress_sq.jpg" width="115%" routerLink="/cloth" routerLinkActive="active">-->
-        <!--<p>Cloth</p>-->
-      <!--</div>-->
-      <!--<div class="column">-->
-        <!--<img src="/assets/image/book_sq.png" width="115%" routerLink="/book" routerLinkActive="active">-->
-        <!--<p>Books</p>-->
-      <!--</div>-->
-      <!--<div class="column">-->
-        <!--<img src="/assets/image/bag_sq.jpg" width="115%" routerLink="/purse" routerLinkActive="active">-->
-        <!--<p>Bag</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-      <!--<div class="column">-->
-        <!--<img src="/assets/image/games_sq.jpg" width="115%" routerLink="/game" routerLinkActive="active">-->
-        <!--<p>Games</p>-->
-      <!--</div>-->
-      <!--<div class="column">-->
-        <!--<img src="/assets/image/toy_sq.jpg" width="115%" routerLink="/toy" routerLinkActive="active">-->
-        <!--<p>Toy</p>-->
-      <!--</div>-->
-      <!--<div class="column">-->
-        <!--<img src="/assets/image/jew_sq.jpg" width="115%" routerLink="/jewelry" routerLinkActive="active">-->
-        <!--<p>Jewelry</p>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
+
 
 

@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
+import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
+import { EntityComponent } from './entity/entity.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     NavComponent,
     SearchComponent,
     FooterComponent,
+    CreateRecipeComponent,
+    EntityComponent,
   ],
   imports: [
     BrowserModule,
