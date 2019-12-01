@@ -106,7 +106,7 @@
             Log-in to your account
           </div>
         </h2>
-        <form action="http://localhost:5005/user/register" method="post" class="ui register form" style="margin-left: 50px">
+        <form action="http://localhost:5005/user/login" name="form3" method="post" class="ui register form" style="margin-left: 50px">
           <div class="ui stacked secondary  segment">
             <!--<div class="field">-->
               <!--<div class="ui left icon input">-->
@@ -117,7 +117,7 @@
             <div class="field">
               <div class="ui left icon input">
                 <i class="lock icon"></i>
-                <input type="text" name="userName" id="uerName" placeholder="userName">
+                <input type="text" name="email" id="email" placeholder="email">
               </div>
             </div>
             <div class="field">
@@ -128,8 +128,9 @@
             </div>
             <!--<button (click)="onClick()" class="ui fluid large teal submit button" >Login</button>-->
             <div class="field">
-            <button class="ui fluid large teal submit button" type="submit">login</button>
-              <!--<div class="ui left icon input">-->
+              <input type="button"  type="submit" onclick="form3.action='http://localhost:5005/user/login';form3.submit();"/>
+              <!--<button class="ui fluid large teal submit button" type="submit">login</button>-->
+                <!--<div class="ui left icon input">-->
                 <!--<i class="lock icon"></i>-->
                 <!--<input type="text" name="userName" id="uerName" placeholder="userName">-->
               </div>
