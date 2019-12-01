@@ -40,6 +40,22 @@ public class TableSearchService implements TableSearchDao {
         return user;
     }
 
+    @Override
+    public boolean emailUsed(String email) {
+        String sql = "select * from user where email = ?";
+        List row = jdbcTemplateObject.queryForList(sql, email);
+        if(row.size() != 0){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int getTotalUserNumber() {
+        String sql = "select count(*) from user";
+        return jdbcTemplateObject.queryForObject(sql, Integer.class);
+    }
+
     //------------------------------------------------------------------------------------------------------------------
     @Override
     public List<UserFollowDto> getAllPublishers(String userId) {

@@ -10,6 +10,8 @@ import com.topchef.demo.dto.tableEntity.UserDto;
 import com.topchef.demo.dto.tableEntity.UserFollowDto;
 import com.topchef.demo.service.TableSearchService;
 import com.topchef.demo.service.UserHandlesService;
+import com.topchef.demo.utils.CreateTimeUtils;
+import com.topchef.demo.utils.IDUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -78,9 +80,14 @@ public class UserController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public void register(RegisterDto registerDto){
-        registerDto.setUerId("4399");
-        registerDto.setCreateTime("2019-12-12");
-        userHandlesService.register(registerDto);
+    public String register(RegisterDto registerDto){
+        if(tableSearchService.emailUsed(registerDto.getEmail())){
+            return "Sorry, email is used";
+        }else{
+            registerDto.setUerId(String.valueOf(tableSearchService.getTotalUserNumber()+1));
+            registerDto.setCreateTime(CreateTimeUtils.genCreateTime());
+            userHandlesService.register(registerDto);
+        }
+        return "Register succeed!";
     }
 }

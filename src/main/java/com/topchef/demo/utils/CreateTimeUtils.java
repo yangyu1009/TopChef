@@ -8,6 +8,6 @@ public class CreateTimeUtils {
         SimpleDateFormat sdf = new SimpleDateFormat();
         sdf.applyPattern("yyyy-MM-dd");
         Date date = new Date();
-        return String.valueOf(date);
+        return sdf.format(date);
     }
 }

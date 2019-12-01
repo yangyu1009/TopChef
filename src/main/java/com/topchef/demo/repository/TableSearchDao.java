@@ -10,6 +10,8 @@ public interface TableSearchDao {
     //User Table
     public List<UserDto> getAllUsers();
     public UserDto getUserById(String userId);
+    public boolean emailUsed(String email);
+    public int getTotalUserNumber();
 
     //UserFollow Table
     public List<UserFollowDto> getAllPublishers(String userId);
