@@ -1304,7 +1304,7 @@ $.fn.form.settings = {
   error: {
     identifier : 'You must specify a string identifier for each field',
     method     : 'The method you called is not defined.',
-    noRule     : 'There is no rule matching the one you specified',
+    noRule     : 'There is no rule matching the handlesEntity you specified',
     oldSyntax  : 'Starting in 2.0 forms now only take a single settings object. Validation settings converted to new syntax automatically.'
   },
 

@@ -106,21 +106,33 @@
             Log-in to your account
           </div>
         </h2>
-        <form action="https://s.codepen.io/voltron2112/debug/PqrEPM?" method="get" class="ui large form" style="margin-left: 50px">
+        <form action="http://localhost:5005/user/register" method="post" class="ui register form" style="margin-left: 50px">
           <div class="ui stacked secondary  segment">
             <div class="field">
               <div class="ui left icon input">
                 <i class="user icon"></i>
-                <input type="text" name="email" placeholder="E-mail address">
+                <input type="text" name="email" id= "email" placeholder="E-mail address">
               </div>
             </div>
             <div class="field">
               <div class="ui left icon input">
                 <i class="lock icon"></i>
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password"  id="password" placeholder="Password">
               </div>
             </div>
+<<<<<<< HEAD
             <button (click)="onClick()" class="ui fluid large teal submit button" >Login</button>
+=======
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="text" name="userName" id="uerName" placeholder="userName">
+              </div>
+            </div>
+            <div class="ui fluid large teal submit button">
+              <button type="submit">register</button>
+            </div>
+>>>>>>> 9cbb13dfd7f7b808ae013f3c5053c3a720b6c2e9
           </div>
 
           <div class="ui error message"></div>

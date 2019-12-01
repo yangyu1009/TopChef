@@ -1,6 +1,6 @@
 package com.topchef.demo.mapper;
 
-import com.topchef.demo.dto.SubscribeDto;
+import com.topchef.demo.dto.tableEntity.SubscribeDto;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -12,8 +12,6 @@ public class SubscribeMapper implements RowMapper<SubscribeDto> {
         SubscribeDto subscribe = new SubscribeDto();
         subscribe.setUserId(resultSet.getString("u_id"));
         subscribe.setRecipeId(resultSet.getString("r_id"));
-        subscribe.setRecipeName(resultSet.getString("r_name"));
-        subscribe.setIamge(resultSet.getString("image"));
         return subscribe;
     }
 }
