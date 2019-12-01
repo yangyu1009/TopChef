@@ -4,11 +4,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http'; // Step 2
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
-
-
+import {FormsModule} from "@angular/forms";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,7 +37,8 @@ import { AllRecipeComponent } from './all-recipe/all-recipe.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    FormsModule
   ],
   providers: [],
   exports: [AppComponent],

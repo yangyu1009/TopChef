@@ -2,12 +2,6 @@
   <div class="header item">
     Top Chef
   </div>
-  <!--<div class="ui action input">-->
-    <!--<input [(ngModel)]="searchKey" type="text" placeholder="Find a recipt...">-->
-    <!--<button class="ui button" type="submit" (click)="searchRequest(searchKey)">Go</button>-->
-  <!--</div>-->
-
-
   <a class="item" routerLink="/" routerLinkActive="active">
     Home
   </a>
@@ -18,7 +12,16 @@
     All Recipes
   </a>
 
-  <!--<div class="right item">-->
+  <div class="ui action input">
+    <!--<input [(ngModel)]="searchKey" type="text" placeholder="Find a recipe...">-->
+    <!--<button class="ui button" type="submit" (click)="searchRequest(searchKey)">Go</button>-->
+
+    <input [(ngModel)]="searchKey" placeholder="Find a recipe..." type="text">
+    <button class="ui button" type="submit" (click)="searchRequest()" >Go</button>
+  </div>
+
+
+    <!--<div class="right item">-->
 
 
   <!--</div>-->
