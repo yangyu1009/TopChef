@@ -34,5 +34,10 @@ public class RecipeController {
     public List<IngredientDto> getIngredientById(@PathVariable("recipeId") String recipeId){
         return tableSearchService.getAllIngredientsByRecipeId(recipeId);
     }
+
+    @GetMapping(path = "/search/{keyword}")
+    public List<RecipeDto> searchRecipe(@PathVariable("keyword") String keyword){
+        return recipeService.searchRecipe(keyword);
+    }
 }
 

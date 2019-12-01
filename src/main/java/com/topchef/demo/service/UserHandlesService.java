@@ -39,7 +39,7 @@ public class UserHandlesService implements TopChefUserDao {
         jdbcTemplateObject.update(sql, IDUtils.genRecipeId(), createRecipe.getRecipeName(), createRecipe.getDescription(), createRecipe.getImage(), 1, 1, CreateTimeUtils.genCreateTime(), "gao");
         for(int i=0; i <createRecipe.getPractice().size(); i++){
             sql ="insert into practice(r_id, index, description, image) values (?,?,?,?)";
-            jdbcTemplateObject.update(sql, createRecipe.getRecipeId(), (i+1), createRecipe.getPracticeDescription().get(i), createRecipe.getPracticeImage().get(i));
+            jdbcTemplateObject.update(sql, createRecipe.getRecipeId(), (i), createRecipe.getPracticeDescription().get(i), createRecipe.getPracticeImage().get(i));
         }
         for(int i=0; i < createRecipe.getIngredientName().size(); i++){
             sql ="insert into ingredient(r_id, name, amount) values (?,?,?)";

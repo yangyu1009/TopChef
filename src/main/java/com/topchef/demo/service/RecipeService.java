@@ -4,18 +4,17 @@ import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
 import com.topchef.demo.dto.tableEntity.IngredientDto;
 import com.topchef.demo.dto.tableEntity.PracticeDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
-import com.topchef.demo.dto.handlesEntity.SubscribeAndViewNumberDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
+import com.topchef.demo.mapper.RecipeMapper;
 import com.topchef.demo.repository.TopChefRecipeDao;
+import org.springframework.beans.BeanUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -52,7 +51,6 @@ public class RecipeService implements TopChefRecipeDao {
         for(IngredientDto ingredient: ingredientList){
             Map<String, String> map = recipeDetail.getIngredient();
             map.put(ingredient.getIngredientName(), ingredient.getIngredientAmount());
-            //recipeDetail.setIngredient(recipeDetail.getIngredient());
         }
 
         //Practice
@@ -66,4 +64,22 @@ public class RecipeService implements TopChefRecipeDao {
         return recipeDetail;
     }
 
+    @Override
+    public List<RecipeDto> searchRecipe(String keyword) {
+        keyword = keyword.replaceAll("[\\pP\\pS\\pC\\pM]", "");
+        String[] words = keyword.split("\\s+");
+        List<RecipeDto> recipes = new ArrayList<>();
+        for(String word: words){
+            String sql = "select * from recipe where r_name like ?";
+            List<RecipeDto> recipe = jdbcTemplateObject.query(sql,new String[]{"%"+word+"%"}, new RecipeMapper());
+            recipes.addAll(recipe);
+        }
+        return recipes.stream()
+                .map(recipe -> {
+                    RecipeDto dto = new RecipeDto();
+                    BeanUtils.copyProperties(recipe, dto);
+                    return dto;
+                })
+                .collect(Collectors.toList());
+    }
 }

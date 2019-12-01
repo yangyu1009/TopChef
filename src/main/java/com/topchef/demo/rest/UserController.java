@@ -1,24 +1,15 @@
 package com.topchef.demo.rest;
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
-import com.topchef.demo.dto.handlesEntity.PublisherAndFollowerDto;
-import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
 import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
-import com.topchef.demo.dto.tableEntity.SubscribeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
 import com.topchef.demo.dto.tableEntity.UserFollowDto;
 import com.topchef.demo.service.TableSearchService;
 import com.topchef.demo.service.UserHandlesService;
 import com.topchef.demo.utils.CreateTimeUtils;
-import com.topchef.demo.utils.IDUtils;
-import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 
 @CrossOrigin
@@ -49,8 +40,9 @@ public class UserController {
     }
 
     @GetMapping(path = "/deleteRecipe/{recipeId}")
-    public void deleteRecipe(@PathVariable("recipeId") String recipeId){
+    public String deleteRecipe(@PathVariable("recipeId") String recipeId){
         userHandlesService.deleteRecipe(recipeId);
+        return "Delete Succeed!";
     }
 
     @GetMapping(path = "/recipeList/{userId}")
