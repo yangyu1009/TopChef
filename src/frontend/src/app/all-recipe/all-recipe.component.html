@@ -1,0 +1,15 @@
+<div class="ui four column relaxed grid "  style="margin-left: 15px" *ngFor="let recipeChunk of recipeChunks;">
+  <div class="row ">
+    <div class="column ui segment"  *ngFor="let recipe of recipeChunk ">
+
+      <img src={{recipe.image}} (click) = "onSelect(recipe)" class="fixImageSize"/>
+      <p>{{recipe.recipeName}}</p>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>

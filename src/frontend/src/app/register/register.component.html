@@ -1,0 +1,43 @@
+
+<div class="ui middle aligned center aligned grid" style="margin-left: 20%; width: 40%">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+        Register
+      </div>
+    </h2>
+    <form action="http://localhost:5005/user/register" method="post" class="ui register form" style="margin-left: 50px">
+      <div class="ui stacked secondary  segment">
+
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="text" name="userName" id="uerName" placeholder="userName">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" id= "email" placeholder="E-mail address">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password"  id="password" placeholder="Password">
+          </div>
+        </div>
+        <!--<button (click)="onClick()" class="ui fluid large teal submit button" >Login</button>-->
+
+        <button class="ui fluid large teal submit button" type="submit">register</button>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+
+  </div>
+</div>
+
+
+

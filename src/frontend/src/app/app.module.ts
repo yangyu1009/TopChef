@@ -20,6 +20,8 @@ import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 import { EntityComponent } from './entity/entity.component';
+import { RegisterComponent } from './register/register.component';
+import { AllRecipeComponent } from './all-recipe/all-recipe.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { EntityComponent } from './entity/entity.component';
     FooterComponent,
     CreateRecipeComponent,
     EntityComponent,
+    RegisterComponent,
+    AllRecipeComponent,
   ],
   imports: [
     BrowserModule,

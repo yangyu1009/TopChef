@@ -137,13 +137,10 @@ public class UserHandlesService implements TopChefUserDao {
         String sql = "insert into user(u_id, u_name, email, create_date, password) values(?,?,?,?,?)";
         jdbcTemplateObject.update(sql, registerDto.getUerId(), registerDto.getUserName(), registerDto.getEmail(), registerDto.getCreateTime(), registerDto.getPassword());
     }
-<<<<<<< HEAD:src/main/java/com/topchef/demo/service/TopChefTopChefUserService.java
 
     public boolean isSuccess() {
         return true;
     }
 
 
-=======
->>>>>>> 9cbb13dfd7f7b808ae013f3c5053c3a720b6c2e9:src/main/java/com/topchef/demo/service/UserHandlesService.java
 }

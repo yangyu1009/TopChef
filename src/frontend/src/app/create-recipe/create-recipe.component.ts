@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import * as $ from 'jquery';
-import {creatRecipeService} from '../create-recipe/createRecipeService.service';
+// import {creatRecipeService} from '../create-recipe/createRecipeService.service';
 import {RecipeInfo} from "./model/recipeInfo";
 
 @Component({
@@ -13,10 +13,9 @@ export class CreateRecipeComponent implements OnInit {
   number2 = 0;
   myRecipeList: RecipeInfo[];
 
-  constructor(private service: creatRecipeService) { }
+  constructor() { }
 
   ngOnInit() {
-
   }
   // var number = 0; //计数
    add1(){
@@ -36,14 +35,14 @@ export class CreateRecipeComponent implements OnInit {
     this.number2++;
   }
 
-  add(recipeName: string): void {
-    recipeName = recipeName.trim();
-    if (!recipeName) {
-      return;
-    }
-    this.service.addRecipe({recipeName} as RecipeInfo).subscribe(recipe => {
-      this.myRecipeList.push(recipe);
-    })
-  }
+  // add(recipeName: string): void {
+  //   recipeName = recipeName.trim();
+  //   if (!recipeName) {
+  //     return;
+  //   }
+  //   this.service.addRecipe({recipeName} as RecipeInfo).subscribe(recipe => {
+  //     this.myRecipeList.push(recipe);
+  //   })
+  //}
 
 }

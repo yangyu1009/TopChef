@@ -2,47 +2,90 @@
   <div class="ui segment">
     <h2>Recipe</h2>
     <div class="ui form" style="width: 60%">
-      <div class="field">
-        <label>Recipe name</label>
-        <input type="text">
-      </div>
-      <div class="text-area">
-        <label>description</label>
-        <input type="text">
-      </div>
-      <div class="ui right labeled left icon input">
-        <i class="tags icon"></i>
-        <input type="text" placeholder="Enter tags">
-        <a class="ui tag label">
-          Add Tag
-        </a>
-      </div>
+
+        <!--<input type="text">-->
+        <form action="http://localhost:5005/user/createRecipe" method="post" class="ui createRecipe form" style="margin-left: 50px">
+          <div class="ui stacked secondary  segment">
+          <div class="field">
+            <label>Recipe name</label>
+            <input type="text" name="recipeName" id= "recipeName" placeholder="recipeName">
+          </div>
+            <div class="field">
+              <div class="text-area">
+                <label>description</label>
+                <input type="text" name="description" id="description" placeholder="description">
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="ui segment">
+                <label>please add ingredients</label>
+                <form id="inputForm1" name="inputForm" action="/createRecipe"  method="post">
+                  <div id="groups1">
+                    <!-- 通过js动态添加输入框 -->
+                    <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
+                  </div>
+                  <button type="button" (click)="add1()" >Add</button>
+                  <!--<button type="submit" >Submit</button>-->
+                </form>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui segment">
+                <label>please add steps</label>
+                <form id="inputForm2" name="inputForm" action="/step"  method="post">
+                  <div id="groups2">
+                    <!-- 通过js动态添加输入框 -->
+                    <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
+                  </div>
+                  <button type="button" (click)="add2()" >Add</button>
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+            <button type="submit" >Submit</button>
+
+        </form>
     </div>
   </div>
-
-  <div class="ui segment">
-    <h2>please add ingredients</h2>
-    <form id="inputForm1" name="inputForm" action="/createRecipe"  method="post">
-      <div id="groups1">
-    <!-- 通过js动态添加输入框 -->
-    <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
-      </div>
-      <button type="button" (click)="add1()" >Add</button>
-      <button type="submit" >Submit</button>
-    </form>
-  </div>
-  <div class="ui segment">
-    <h2>please add steps</h2>
-    <form id="inputForm2" name="inputForm" action="/step"  method="post">
-      <div id="groups2">
-        <!-- 通过js动态添加输入框 -->
-        <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
-      </div>
-      <button type="button" (click)="add2()" >Add</button>
-      <button type="submit" >Submit</button>
-    </form>
-  </div>
 </div>
+
+
+
+
+            <!--<div class="ui right labeled left icon input">-->
+        <!--<i class="tags icon"></i>-->
+        <!--<input type="text" placeholder="Enter tags">-->
+        <!--<a class="ui tag label">-->
+          <!--Add Tag-->
+        <!--</a>-->
+      <!--</div>-->
+
+  <!--<div class="ui segment">-->
+    <!--<h2>please add ingredients</h2>-->
+    <!--<form id="inputForm1" name="inputForm" action="/createRecipe"  method="post">-->
+      <!--<div id="groups1">-->
+    <!--&lt;!&ndash; 通过js动态添加输入框 &ndash;&gt;-->
+    <!--&lt;!&ndash; 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> &ndash;&gt;-->
+      <!--</div>-->
+      <!--<button type="button" (click)="add1()" >Add</button>-->
+      <!--<button type="submit" >Submit</button>-->
+    <!--</form>-->
+  <!--</div>-->
+  <!--<div class="ui segment">-->
+    <!--<h2>please add steps</h2>-->
+    <!--<form id="inputForm2" name="inputForm" action="/step"  method="post">-->
+      <!--<div id="groups2">-->
+        <!--&lt;!&ndash; 通过js动态添加输入框 &ndash;&gt;-->
+        <!--&lt;!&ndash; 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> &ndash;&gt;-->
+      <!--</div>-->
+      <!--<button type="button" (click)="add2()" >Add</button>-->
+      <!--<button type="submit" >Submit</button>-->
+    <!--</form>-->
+  <!--</div>-->
+<!--</div>-->
 
 <!--<script type="text/javascript">-->
   <!--var number = 0; //计数-->

@@ -90,7 +90,7 @@ public class UserController {
         }
         return "Register succeed!";
     }
-    @GetMapping(path= "/login")
-    public boolean loginSuccess() { return topChefUserService.isSuccess(); }
+//    @GetMapping(path= "/login")
+//    public boolean loginSuccess() { return topChefUserService.isSuccess(); }
 
 }
