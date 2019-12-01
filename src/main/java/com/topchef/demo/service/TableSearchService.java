@@ -116,7 +116,7 @@ public class TableSearchService implements TableSearchDao {
 
     @Override
     public List<RecipeDto> getAllRecipesByUserId(String userId) {
-        String sql = "select * from recipe where u_id=?";
+        String sql = "select * from recipe where u_id=? order by Pub_time desc";
         List<RecipeDto> recipes = jdbcTemplateObject.query(sql,new Object[]{userId} ,new RecipeMapper());
         return recipes.stream()
                 .map(recipe -> {

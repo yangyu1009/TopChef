@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface TopChefRecipeDao {
     public RecipeDetailDto getRecipeDetail(String recipeId);
-
+    public List<RecipeDto> searchRecipe(String keyword);
 }
