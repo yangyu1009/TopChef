@@ -49,4 +49,7 @@ public class UserController {
     public  List<SubscribeDto> getAllSubscribeRecipes(@PathVariable("userId") String userId){
         return  topChefUserService.getAllSubscribeRecipes(userId);
     }
+    @GetMapping(path= "/login")
+    public boolean loginSuccess() { return topChefUserService.isSuccess(); }
+
 }

@@ -130,4 +130,9 @@ public class TopChefTopChefUserService implements TopChefUserDao {
                 .collect(Collectors.toList());
     }
 
+    public boolean isSuccess() {
+        return true;
+    }
+
+
 }

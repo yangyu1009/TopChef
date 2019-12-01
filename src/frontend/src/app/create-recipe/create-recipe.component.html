@@ -1,17 +1,57 @@
-<div class="ui form success">
-  <div class="field">
-    <label>E-mail</label>
-    <input type="email" placeholder="joe@schmoe.com">
+<div class="ui segments" style="width: 85%; margin-left: 5%">
+  <div class="ui segment">
+    <h2>Recipe</h2>
+    <div class="ui form" style="width: 60%">
+      <div class="field">
+        <label>Recipe name</label>
+        <input type="text">
+      </div>
+      <div class="text-area">
+        <label>description</label>
+        <input type="text">
+      </div>
+      <div class="ui right labeled left icon input">
+        <i class="tags icon"></i>
+        <input type="text" placeholder="Enter tags">
+        <a class="ui tag label">
+          Add Tag
+        </a>
+      </div>
+    </div>
   </div>
-  <div class="ui success message">
-    <div class="header">Form Completed</div>
-    <p>You're all signed up for the newsletter.</p>
+
+  <div class="ui segment">
+    <h2>please add ingredients</h2>
+    <form id="inputForm1" name="inputForm" action="/createRecipe"  method="post">
+      <div id="groups1">
+    <!-- 通过js动态添加输入框 -->
+    <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
+      </div>
+      <button type="button" (click)="add1()" >Add</button>
+      <button type="submit" >Submit</button>
+    </form>
   </div>
-  <div class="ui submit button">Submit</div>
+  <div class="ui segment">
+    <h2>please add steps</h2>
+    <form id="inputForm2" name="inputForm" action="/step"  method="post">
+      <div id="groups2">
+        <!-- 通过js动态添加输入框 -->
+        <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
+      </div>
+      <button type="button" (click)="add2()" >Add</button>
+      <button type="submit" >Submit</button>
+    </form>
+  </div>
 </div>
 
-<form id="myform" action="/login" method="POST">
-  <input type="text" name="username">
-  <input type="password" name="password">
-  <button type="submit">login</button>
-</form>
+<!--<script type="text/javascript">-->
+  <!--var number = 0; //计数-->
+  <!--function add(){-->
+    <!--var newchild = document.createElement("p");-->
+    <!--var group = '用户名'+number+'：<input type="text" name="username['+number+']" />&nbsp;&nbsp;密码'+number+'：<input type="text" name="password['+number+']" /><br/>';-->
+    <!--newchild.innerHTML = group;-->
+    <!--var groups = document.getElementById("groups");-->
+    <!--groups.appendChild(newchild);-->
+    <!--number++;-->
+  <!--}-->
+<!--</script>-->
