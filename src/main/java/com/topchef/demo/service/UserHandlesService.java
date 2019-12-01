@@ -2,7 +2,11 @@ package com.topchef.demo.service;
 
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
+<<<<<<< HEAD
 import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
+=======
+import com.topchef.demo.dto.handlesEntity.LoginTryDto;
+>>>>>>> c60de6e73300b2ccd17ee5d06bfbd5c43a7b3872
 import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.SubscribeDto;
@@ -10,6 +14,7 @@ import com.topchef.demo.dto.tableEntity.UserDto;
 import com.topchef.demo.dto.tableEntity.UserFollowDto;
 import com.topchef.demo.repository.TopChefUserDao;
 import com.topchef.demo.utils.CreateTimeUtils;
+import com.topchef.demo.utils.CurrentUser;
 import com.topchef.demo.utils.IDUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -149,6 +154,7 @@ public class UserHandlesService implements TopChefUserDao {
         jdbcTemplateObject.update(sql, registerDto.getUerId(), registerDto.getUserName(), registerDto.getEmail(), registerDto.getCreateTime(), registerDto.getPassword());
     }
 
+<<<<<<< HEAD
     @Override
     public RecipeDetailDto updateRecipe(CreateRecipeDto createRecipe) {
        // RecipeDetailDto recipeDetail =
@@ -160,6 +166,25 @@ public class UserHandlesService implements TopChefUserDao {
         return null;
     }
 
+=======
+
+    public Boolean Logincheck(LoginTryDto loginTryDto) {
+        String sql = "select u_id from user where email=? and password=?";
+        System.out.println(loginTryDto.getEmail());
+        System.out.println(loginTryDto.getPassword());
+        List row = jdbcTemplateObject.queryForList(sql, loginTryDto.getEmail(), loginTryDto.getPassword());
+        if(row.size() != 0){
+
+            Object jf=row.get(0);
+            Map txnLog=(Map)jf;
+            //System.out.println(txnLog.get("u_id").toString());
+            CurrentUser.CurrentUserId.add(txnLog.get("u_id").toString());
+            //System.out.println(CurrentUser.getLength());
+            return true;
+        }
+        return false;
+    }
+>>>>>>> c60de6e73300b2ccd17ee5d06bfbd5c43a7b3872
     public boolean isSuccess() {
         return true;
     }

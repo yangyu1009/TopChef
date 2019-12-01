@@ -6,7 +6,7 @@
         Register
       </div>
     </h2>
-    <form action="http://localhost:5005/user/register" method="post" class="ui register form" style="margin-left: 50px">
+    <form action="" method="post" name="form2" class="ui register form" style="margin-left: 50px">
       <div class="ui stacked secondary  segment">
 
         <div class="field">
@@ -29,7 +29,7 @@
         </div>
         <!--<button (click)="onClick()" class="ui fluid large teal submit button" >Login</button>-->
 
-        <button class="ui fluid large teal submit button" type="submit">register</button>
+        <input type="button"  type="submit" onclick="form2.action='http://localhost:5005/user/register';form2.submit();"/>
       </div>
 
       <div class="ui error message"></div>

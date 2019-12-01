@@ -1,6 +1,7 @@
 package com.topchef.demo.rest;
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
+import com.topchef.demo.dto.handlesEntity.LoginTryDto;
 import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
@@ -84,6 +85,18 @@ public class UserController {
             userHandlesService.register(registerDto);
         }
         return "Register succeed!";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Boolean LoginResult(LoginTryDto loginTryDto){
+        System.out.println("Test");
+        if(userHandlesService.Logincheck(loginTryDto)==true){
+            System.out.println("Succeed");
+            return true;
+        }
+        System.out.println("Fail");
+        return false;
+        
     }
 //    @GetMapping(path= "/login")
 //    public boolean loginSuccess() { return topChefUserService.isSuccess(); }
