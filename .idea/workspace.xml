@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa467025-e478-4dd3-9947-cbb2225634c8" name="Default Changelist" comment="Login Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/dto/handlesEntity/LoginTryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/utils/CurrentUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/app/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/rest/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/topchef/demo/service/UserHandlesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/demo.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/demo.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/rest/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/rest/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/UserHandlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/topchef/demo/service/UserHandlesService.class" afterDir="false" />
-    </list>
+    <list default="true" id="aa467025-e478-4dd3-9947-cbb2225634c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +156,7 @@
       <workItem from="1575141003119" duration="509000" />
       <workItem from="1575141656484" duration="26623000" />
       <workItem from="1575186748106" duration="2248000" />
-      <workItem from="1575189214278" duration="7187000" />
+      <workItem from="1575189214278" duration="7502000" />
     </task>
     <task id="LOCAL-00001" summary="Nothing">
       <created>1575196196457</created>
@@ -179,7 +165,42 @@
       <option name="project" value="LOCAL" />
       <updated>1575196196457</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Login Update">
+      <created>1575196460745</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575196460745</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Insert Error!">
+      <created>1575196529470</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575196529470</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Login">
+      <created>1575196555626</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575196555626</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Login">
+      <created>1575196570609</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575196570609</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add login function&#10;A static list CurrentUserId contains online users">
+      <created>1575196766490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575196766490</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -210,7 +231,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Nothing" />
     <MESSAGE value="Login Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Update" />
+    <MESSAGE value="Insert Error!" />
+    <MESSAGE value="Login" />
+    <MESSAGE value="Add login function&#10;A static list CurrentUserId contains online users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add login function&#10;A static list CurrentUserId contains online users" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
