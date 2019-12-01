@@ -3,7 +3,6 @@ package com.topchef.demo.repository;
 import com.topchef.demo.dto.tableEntity.*;
 
 import java.util.List;
-import java.util.Set;
 
 public interface TableSearchDao {
 

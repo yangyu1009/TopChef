@@ -24,9 +24,12 @@ public class UserController {
         this.tableSearchService = tableSearchService;
     }
 
-    @PostMapping(value = "/createRecipe")
-    public void createRecipe(CreateRecipeDto createRecipe){
+    @RequestMapping(value = "/createRecipe", method = RequestMethod.POST)
+    public String createRecipe(CreateRecipeDto createRecipe){
+        createRecipe.setUserId("4399");
+        System.out.println("go");
         userHandlesService.createRecipe(createRecipe);
+        return  "Done";
     }
 
     @GetMapping(path = "/followerList/{userId}")

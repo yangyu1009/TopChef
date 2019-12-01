@@ -5,6 +5,7 @@
 
         <!--<input type="text">-->
         <form action="http://localhost:5005/user/createRecipe" method="post" class="ui createRecipe form" style="margin-left: 50px">
+          <input type="button" type="submit" onclick="form.action='http://localhost:5005/user/createRecipe'; form.submit();"/>
           <div class="ui stacked secondary  segment">
           <div class="field">
             <label>Recipe name</label>
@@ -20,39 +21,51 @@
             <div class="field">
               <div class="ui segment">
                 <label>please add ingredients</label>
-                <form id="inputForm1" name="inputForm" action="/createRecipe"  method="post">
                   <div id="groups1">
                     <!-- 通过js动态添加输入框 -->
                     <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
                   </div>
                   <button type="button" (click)="add1()" >Add</button>
                   <!--<button type="submit" >Submit</button>-->
-                </form>
               </div>
             </div>
             <div class="field">
               <div class="ui segment">
                 <label>please add steps</label>
-                <form id="inputForm2" name="inputForm" action="/step"  method="post">
                   <div id="groups2">
                     <!-- 通过js动态添加输入框 -->
                     <!-- 例如：用户名n：<input type="text" name="username[n]" />&nbsp;&nbsp;密码n：<input type="text" name="password[n]" /><br/> -->
                   </div>
                   <button type="button" (click)="add2()" >Add</button>
-                </form>
               </div>
             </div>
-
-
           </div>
             <button type="submit" >Submit</button>
-
         </form>
     </div>
   </div>
 </div>
 
-
+<script type="text/javascript">
+  var number1 = 0;
+  var number2 = 0
+  function add1() {
+    var newchild = document.createElement("p");
+    var group = 'ingredient'+this.number1+'：<input type="text" name="ingredientName['+this.number1+']"  id="ingredientName['+this.number1+']"/>&nbsp;&nbsp;weight'+this.number1+'：<input type="text" name="ingredientNumber['+this.number1+']" id="ingredientNumber['+this.number1+']"/><br/>';
+    newchild.innerHTML = group;
+    var groups = document.getElementById("groups1");
+    groups.appendChild(newchild);
+    this.number1++;
+  }
+  function add2() {
+    var newchild = document.createElement("p");
+    var group = 'step'+this.number2+'：<input type="text" name="practiceDescription['+this.number2+']" id="practiceDescription['+this.number2+']"/><br/>';
+    newchild.innerHTML = group;
+    var groups = document.getElementById("groups2");
+    groups.appendChild(newchild);
+    this.number2++;
+  }
+</script>
 
 
             <!--<div class="ui right labeled left icon input">-->

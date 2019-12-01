@@ -1,6 +1,7 @@
 package com.topchef.demo.repository;
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
+import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
 import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
@@ -10,6 +11,9 @@ import java.util.List;
 public interface TopChefUserDao {
     // create a recipe
     public void createRecipe(CreateRecipeDto createRecipe);
+    public void insertRecipe(CreateRecipeDto createRecipe);
+    public void insertIngredient(CreateRecipeDto createRecipe);
+    public void insertPractice(CreateRecipeDto createRecipe);
 
     //get follower list Done
     public List<UserDto> getFollowerList(String userId);
@@ -19,9 +23,6 @@ public interface TopChefUserDao {
 
     // delete recipe Done
     public void deleteRecipe(String recipeId);
-
-    // update recipe
-    public void updateRecipe(String recipeId);
 
     // subscribeRecipe Done
     public void subscribeRecipe(String recipeId);
@@ -37,4 +38,10 @@ public interface TopChefUserDao {
 
     //register
     public void register(RegisterDto registerDto);
+
+    //update Recipe
+    public RecipeDetailDto updateRecipe(CreateRecipeDto createRecipe);
+
+    //update UserInfo
+    public UserDto updateUserInfo();
 }

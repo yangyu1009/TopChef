@@ -2,6 +2,7 @@ package com.topchef.demo.service;
 
 
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
+import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
 import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.SubscribeDto;
@@ -35,14 +36,29 @@ public class UserHandlesService implements TopChefUserDao {
     @Override
     public void createRecipe(CreateRecipeDto createRecipe) {
         createRecipe.setRecipeId(IDUtils.genRecipeId());
-        String sql ="insert into recipe (r_id, r_name, description, image, S_number, V_number, Pub_time, u_id) values (?,?,?,?,?,?,?,?)";
-        jdbcTemplateObject.update(sql, IDUtils.genRecipeId(), createRecipe.getRecipeName(), createRecipe.getDescription(), createRecipe.getImage(), 1, 1, CreateTimeUtils.genCreateTime(), "gao");
-        for(int i=0; i <createRecipe.getPractice().size(); i++){
-            sql ="insert into practice(r_id, index, description, image) values (?,?,?,?)";
-            jdbcTemplateObject.update(sql, createRecipe.getRecipeId(), (i), createRecipe.getPracticeDescription().get(i), createRecipe.getPracticeImage().get(i));
+        insertRecipe(createRecipe);
+        insertIngredient(createRecipe);
+        insertPractice(createRecipe);
+    }
+
+    @Override
+    public void insertRecipe(CreateRecipeDto createRecipe) {
+        String sql ="insert into recipe (r_id, r_name, description, S_number, V_number, Pub_time, u_id) values (?,?,?,?,?,?,?)";
+        jdbcTemplateObject.update(sql,createRecipe.getRecipeId(), createRecipe.getRecipeName(), createRecipe.getDescription(), 0, 0, CreateTimeUtils.genCreateTime(), createRecipe.getUserId());
+    }
+
+    @Override
+    public void insertIngredient(CreateRecipeDto createRecipe) {
+        for(int i=0; i <createRecipe.getPracticeDescription().size(); i++){
+            String sql ="insert into practice(r_id, indexn, description) values (?,?,?)";
+            jdbcTemplateObject.update(sql, createRecipe.getRecipeId(), i, createRecipe.getPracticeDescription().get(i));
         }
-        for(int i=0; i < createRecipe.getIngredientName().size(); i++){
-            sql ="insert into ingredient(r_id, name, amount) values (?,?,?)";
+    }
+
+    @Override
+    public void insertPractice(CreateRecipeDto createRecipe) {
+        for(int i=0; i <createRecipe.getIngredientName().size(); i++){
+            String sql ="insert into ingredient(r_id, name, amount) values (?,?,?)";
             jdbcTemplateObject.update(sql, createRecipe.getRecipeId(),createRecipe.getIngredientName().get(i), createRecipe.getIngredientNumber().get(i));
         }
     }
@@ -83,11 +99,6 @@ public class UserHandlesService implements TopChefUserDao {
     public void deleteRecipe(String recipeId) {
         String sql ="delete from recipe where r_id = ?";
         jdbcTemplateObject.update(sql, recipeId);
-    }
-
-    @Override
-    public void updateRecipe(String recipeId) {
-
     }
 
     @Override
@@ -136,6 +147,17 @@ public class UserHandlesService implements TopChefUserDao {
     public void register(RegisterDto registerDto) {
         String sql = "insert into user(u_id, u_name, email, create_date, password) values(?,?,?,?,?)";
         jdbcTemplateObject.update(sql, registerDto.getUerId(), registerDto.getUserName(), registerDto.getEmail(), registerDto.getCreateTime(), registerDto.getPassword());
+    }
+
+    @Override
+    public RecipeDetailDto updateRecipe(CreateRecipeDto createRecipe) {
+       // RecipeDetailDto recipeDetail =
+        return null;
+    }
+
+    @Override
+    public UserDto updateUserInfo() {
+        return null;
     }
 
     public boolean isSuccess() {
