@@ -26,9 +26,12 @@ public class UserHandlesService implements TopChefUserDao {
     private JdbcTemplate jdbcTemplateObject;
 
     private TableSearchService tableSearchService;
+    private UserFollowService userFollowService;
 
-    public UserHandlesService(TableSearchService tableSearchService) {
+    public UserHandlesService(TableSearchService tableSearchService, UserFollowService userFollowService) {
+
         this.tableSearchService = tableSearchService;
+        this.userFollowService = userFollowService;
     }
 
     //------------------------------------------------------------------------------------------------------------------
@@ -104,6 +107,7 @@ public class UserHandlesService implements TopChefUserDao {
     public void subscribeRecipe(String recipeId) {
         String sql ="insert into subscribe (u_id, r_id) values (?,?)";
         jdbcTemplateObject.update(sql,CurrentUser.CurrentUserId.get(0), recipeId);
+
     }
 
     @Override
@@ -176,6 +180,11 @@ public class UserHandlesService implements TopChefUserDao {
         CurrentUser.CurrentUserId = new ArrayList<>();
     }
 
+    @Override
+    public void followPublisher(String publisherId) {
+        userFollowService.insert(publisherId);
+    }
+
     public Boolean Logincheck(LoginTryDto loginTryDto) {
         String sql = "select u_id from user where email=? and password=?";
         System.out.println(loginTryDto.getEmail());
@@ -194,6 +203,4 @@ public class UserHandlesService implements TopChefUserDao {
     public boolean isSuccess() {
         return true;
     }
-
-
 }

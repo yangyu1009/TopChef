@@ -7,7 +7,6 @@ import com.topchef.demo.dto.handlesEntity.LoginTryDto;
 import com.topchef.demo.dto.handlesEntity.RegisterDto;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
-import com.topchef.demo.dto.tableEntity.UserFollowDto;
 import com.topchef.demo.service.TableSearchService;
 import com.topchef.demo.service.UserHandlesService;
 import com.topchef.demo.utils.CreateTimeUtils;

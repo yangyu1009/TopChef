@@ -28,6 +28,7 @@ public interface TopChefUserDao {
     // subscribeRecipe Done
     public void subscribeRecipe(String recipeId);
 
+
     // judge whether this publisher is followed or not
     public boolean followOrNot(String userId);
 
@@ -54,4 +55,10 @@ public interface TopChefUserDao {
 
     //Sign out
     public void signOut();
+
+    // follow publisher
+    public void followPublisher(String publisherId);
+
+
+
 }

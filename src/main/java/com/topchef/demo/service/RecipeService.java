@@ -61,6 +61,9 @@ public class RecipeService implements TopChefRecipeDao {
             info.add(practice.getImage());
             recipeDetail.getPractice().add(info);
         }
+
+        updateViewNumber(recipeId);
+
         return recipeDetail;
     }
 
@@ -81,5 +84,17 @@ public class RecipeService implements TopChefRecipeDao {
                     return dto;
                 })
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void updateSubscribeNumber(String recipeId) {
+        String sql = "update recipe set s_number = s_number + 1 where r_id = ?";
+        jdbcTemplateObject.update(sql, recipeId);
+    }
+
+    @Override
+    public void updateViewNumber(String recipeId) {
+        String sql = "update recipe set v_number = v_number + 1 where r_id = ?";
+        jdbcTemplateObject.update(sql, recipeId);
     }
 }
