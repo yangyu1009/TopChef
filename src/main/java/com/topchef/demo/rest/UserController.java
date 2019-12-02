@@ -1,5 +1,6 @@
 package com.topchef.demo.rest;
 
+import com.topchef.demo.aop.Log;
 import com.topchef.demo.dto.handlesEntity.CreateCommentDto;
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
 import com.topchef.demo.dto.handlesEntity.LoginTryDto;
@@ -28,6 +29,7 @@ public class UserController {
     }
 
     // user to userTable------------------------------------------------------------------------------------------------
+    @Log("login in")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Boolean LoginResult(LoginTryDto loginTryDto){
         System.out.println("Test");
@@ -38,6 +40,7 @@ public class UserController {
         System.out.println("Fail");
         return false;
     }
+    @Log("register user")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(RegisterDto registerDto){
         if(tableSearchService.emailUsed(registerDto.getEmail())){
@@ -50,69 +53,76 @@ public class UserController {
         return "Register succeed!";
     }
 
+    @Log("reset password")
     @RequestMapping(value = "/resetPwd", method = RequestMethod.POST)
     public String resetPwd(String newPwd){
         userHandlesService.resetPwd(newPwd);
         return "Reset Succeed!";
     }
 
+    @Log("change User Name")
     @RequestMapping(value = "/changeUserName", method = RequestMethod.POST)
     public String changeUserName(String newName){
         userHandlesService.changeUserName(newName);
         return "Change Name Succeed!";
     }
 
+    @Log("sign out")
     @RequestMapping(path = "/signOut")
     public void signOut(){
         userHandlesService.signOut();
     }
     //user to recipeTable-----------------------------------------------------------------------------------------------
+
+    @Log("create recipe")
     @RequestMapping(value = "/createRecipe", method = RequestMethod.POST)
     public String createRecipe(CreateRecipeDto createRecipe){
         createRecipe.setUserId(CurrentUser.CurrentUserId.get(0));
         System.out.println("go");
         userHandlesService.createRecipe(createRecipe);
-        return  "redirect:http://localhost:4200/";
+        return  "done";
     }
 
+    @Log("get follower list")
     @GetMapping(path = "/followerList/{userId}")
     public List<UserDto> getFollowerList(@PathVariable("userId") String userId){
         return userHandlesService.getFollowerList(userId);
     }
 
+    @Log("get publisher list")
     @GetMapping(path = "/publisherList/{userId}")
     public List<UserDto> getPublisherList(@PathVariable("userId") String userId){
         return userHandlesService.getPublisherList(userId);
     }
 
+    @Log("delete recipe")
     @GetMapping(path = "/deleteRecipe/{recipeId}")
     public String deleteRecipe(@PathVariable("recipeId") String recipeId){
         userHandlesService.deleteRecipe(recipeId);
         return "Delete Succeed!";
     }
 
+    @Log("get user recipe list")
     @GetMapping(path = "/recipeList/{userId}")
     public List<RecipeDto> getAllRecipesByUserId(@PathVariable("userId") String userId){
         return  tableSearchService.getAllRecipesByUserId(userId);
     }
 
+    @Log("get subscribelist")
     @GetMapping(path = "/subscribeList/{userId}")
     public  List<RecipeDto> getAllSubscribeRecipes(@PathVariable("userId") String userId){
         return  userHandlesService.getAllSubscribeRecipes(userId);
     }
 
-    @GetMapping(path = "/follower/{userId}")
-    public List<UserFollowDto> getFollower(@PathVariable("userId") String userId){
-        return tableSearchService.getAllFollowers(userId);
-    }
-
-    @GetMapping(path = "/follower/allUser")
+    @Log("get all user")
+    @GetMapping(path = "/allUser")
     public List<UserDto> getAllUer(){
         return tableSearchService.getAllUsers();
     }
 
 
     //user to subscribeTable--------------------------------------------------------------------------------------------
+    @Log("sbuscribe")
     @GetMapping(path = "/subscribe/{recipeId}")
     public String subscribeRecipe(@PathVariable("recipeId") String recipeId){
         userHandlesService.subscribeRecipe(recipeId);
@@ -120,6 +130,7 @@ public class UserController {
     }
 
     //user to CommentTable----------------------------------------------------------------------------------------------
+    @Log("add comment")
     @RequestMapping(value = "/addComment", method = RequestMethod.POST)
     public String addComment(CreateCommentDto createComment){
         if(tableSearchService.commentValidation(createComment)){
