@@ -71,7 +71,11 @@ public class LogAspect {
         // 设置IP地址
         sysLog.setIp(IPUtils.getIpAddr(request));
         // 模拟一个用户名
-        sysLog.setUsername(CurrentUser.CurrentUserId.get(0));
+        if(CurrentUser.CurrentUserId.size() != 0){
+            sysLog.setUsername(CurrentUser.CurrentUserId.get(0));
+        }else{
+            sysLog.setUsername("customer");
+        }
         sysLog.setTime((int) time);
         sysLog.setCreateTime(new Date());
         // 保存系统日志
