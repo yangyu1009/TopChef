@@ -1,5 +1,6 @@
 package com.topchef.demo.repository;
 
+import com.topchef.demo.dto.handlesEntity.CreateCommentDto;
 import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
 import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
 import com.topchef.demo.dto.handlesEntity.RegisterDto;
@@ -42,6 +43,15 @@ public interface TopChefUserDao {
     //update Recipe
     public RecipeDetailDto updateRecipe(CreateRecipeDto createRecipe);
 
-    //update UserInfo
-    public UserDto updateUserInfo();
+    //write comment
+    public void addComment(CreateCommentDto createComment);
+
+    //Reset password
+    public void resetPwd(String password);
+
+    //Change userName
+    public void changeUserName(String name);
+
+    //Sign out
+    public void signOut();
 }

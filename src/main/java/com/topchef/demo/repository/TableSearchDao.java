@@ -1,5 +1,6 @@
 package com.topchef.demo.repository;
 
+import com.topchef.demo.dto.handlesEntity.CreateCommentDto;
 import com.topchef.demo.dto.tableEntity.*;
 
 import java.util.List;
@@ -29,4 +30,8 @@ public interface TableSearchDao {
 
     //Practice Table
     public List<PracticeDto> getAllPracticesByRecipeId(String recipeId);
+
+    //Comment Table
+    public boolean commentValidation(CreateCommentDto createComment);
+
 }

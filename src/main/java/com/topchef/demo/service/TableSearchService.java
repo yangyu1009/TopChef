@@ -1,8 +1,10 @@
 package com.topchef.demo.service;
 
+import com.topchef.demo.dto.handlesEntity.CreateCommentDto;
 import com.topchef.demo.dto.tableEntity.*;
 import com.topchef.demo.mapper.*;
 import com.topchef.demo.repository.TableSearchDao;
+import com.topchef.demo.utils.CurrentUser;
 import org.springframework.beans.BeanUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -151,5 +153,15 @@ public class TableSearchService implements TableSearchDao {
                     return dto;
                 })
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public boolean commentValidation(CreateCommentDto createComment) {
+        String sql = "select * from user where r_id=? and u_id=? and description=?";
+        List row = jdbcTemplateObject.queryForList(sql, createComment.getRecipeId(), CurrentUser.CurrentUserId.get(0), createComment.getDescription());
+        if(row.size() != 0){
+            return true;
+        }
+        return false;
     }
 }

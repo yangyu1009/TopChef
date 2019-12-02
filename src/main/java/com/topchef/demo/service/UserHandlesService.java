@@ -1,13 +1,7 @@
 package com.topchef.demo.service;
 
 
-import com.topchef.demo.dto.handlesEntity.CreateRecipeDto;
-<<<<<<< HEAD
-import com.topchef.demo.dto.handlesEntity.RecipeDetailDto;
-=======
-import com.topchef.demo.dto.handlesEntity.LoginTryDto;
->>>>>>> c60de6e73300b2ccd17ee5d06bfbd5c43a7b3872
-import com.topchef.demo.dto.handlesEntity.RegisterDto;
+import com.topchef.demo.dto.handlesEntity.*;
 import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.SubscribeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
@@ -37,7 +31,7 @@ public class UserHandlesService implements TopChefUserDao {
         this.tableSearchService = tableSearchService;
     }
 
-
+    //------------------------------------------------------------------------------------------------------------------
     @Override
     public void createRecipe(CreateRecipeDto createRecipe) {
         createRecipe.setRecipeId(IDUtils.genRecipeId());
@@ -109,13 +103,13 @@ public class UserHandlesService implements TopChefUserDao {
     @Override
     public void subscribeRecipe(String recipeId) {
         String sql ="insert into subscribe (u_id, r_id) values (?,?)";
-        jdbcTemplateObject.update(sql,0, recipeId);
+        jdbcTemplateObject.update(sql,CurrentUser.CurrentUserId.get(0), recipeId);
     }
 
     @Override
     public boolean followOrNot(String userId) {
         String sql = "select * from user_follow where p_id=? and f_id=?";
-        List row = jdbcTemplateObject.queryForList(sql, 0, userId);
+        List row = jdbcTemplateObject.queryForList(sql, CurrentUser.CurrentUserId.get(0), userId);
         if(row.size() != 0){
             return true;
         }
@@ -125,7 +119,7 @@ public class UserHandlesService implements TopChefUserDao {
     @Override
     public boolean subscribeOrNot(String recipeId) {
         String sql = "select * from subscribe where u_id=? and r_id=?";
-        List row = jdbcTemplateObject.queryForList(sql, 0, recipeId);
+        List row = jdbcTemplateObject.queryForList(sql, CurrentUser.CurrentUserId.get(0), recipeId);
         if(row.size() != 0){
             return true;
         }
@@ -153,8 +147,6 @@ public class UserHandlesService implements TopChefUserDao {
         String sql = "insert into user(u_id, u_name, email, create_date, password) values(?,?,?,?,?)";
         jdbcTemplateObject.update(sql, registerDto.getUerId(), registerDto.getUserName(), registerDto.getEmail(), registerDto.getCreateTime(), registerDto.getPassword());
     }
-
-<<<<<<< HEAD
     @Override
     public RecipeDetailDto updateRecipe(CreateRecipeDto createRecipe) {
        // RecipeDetailDto recipeDetail =
@@ -162,11 +154,27 @@ public class UserHandlesService implements TopChefUserDao {
     }
 
     @Override
-    public UserDto updateUserInfo() {
-        return null;
+    public void addComment(CreateCommentDto createComment) {
+        String sql = "insert into comment(r_id, u_id, description) values(?,?,?)";
+        jdbcTemplateObject.update(sql, createComment.getRecipeId(), CurrentUser.CurrentUserId.get(0), createComment.getDescription());
     }
 
-=======
+    @Override
+    public void resetPwd(String password) {
+        String sql = "update user set password = ? where u_id = ?";
+        jdbcTemplateObject.update(sql, password, CurrentUser.CurrentUserId.get(0));
+    }
+
+    @Override
+    public void changeUserName(String name) {
+        String sql = "update user set u_name = ? where u_id = ?";
+        jdbcTemplateObject.update(sql, name, CurrentUser.CurrentUserId.get(0));
+    }
+
+    @Override
+    public void signOut() {
+        CurrentUser.CurrentUserId = new ArrayList<>();
+    }
 
     public Boolean Logincheck(LoginTryDto loginTryDto) {
         String sql = "select u_id from user where email=? and password=?";
@@ -174,7 +182,6 @@ public class UserHandlesService implements TopChefUserDao {
         System.out.println(loginTryDto.getPassword());
         List row = jdbcTemplateObject.queryForList(sql, loginTryDto.getEmail(), loginTryDto.getPassword());
         if(row.size() != 0){
-
             Object jf=row.get(0);
             Map txnLog=(Map)jf;
             //System.out.println(txnLog.get("u_id").toString());
@@ -184,7 +191,6 @@ public class UserHandlesService implements TopChefUserDao {
         }
         return false;
     }
->>>>>>> c60de6e73300b2ccd17ee5d06bfbd5c43a7b3872
     public boolean isSuccess() {
         return true;
     }
