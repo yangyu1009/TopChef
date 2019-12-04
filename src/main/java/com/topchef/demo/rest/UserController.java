@@ -11,7 +11,11 @@ import com.topchef.demo.service.TableSearchService;
 import com.topchef.demo.service.UserHandlesService;
 import com.topchef.demo.utils.CreateTimeUtils;
 import com.topchef.demo.utils.CurrentUser;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
+
 import java.util.List;
 
 
@@ -27,7 +31,38 @@ public class UserController {
         this.tableSearchService = tableSearchService;
     }
 
-    // user to userTable------------------------------------------------------------------------------------------------
+
+    @Log("get all user")
+    @GetMapping(path = "/allUser")
+    public List<UserDto> getAllUer(){
+        return tableSearchService.getAllUsers();
+    }
+
+
+    //User service
+    //------------------------------------------------------------------------------------------------------------------
+    //1. register
+    //2. login
+    // sign out
+
+//    public ModelAndView registerRecdirect(String path){
+//        return  new ModelAndView(new RedirectView(path));
+//    }
+    //register
+    @Log("register user")
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public ModelAndView register(RegisterDto registerDto){
+        if(tableSearchService.emailUsed(registerDto.getEmail())){
+            return new ModelAndView(new RedirectView("http://localhost:4200/register"));
+        }else{
+            registerDto.setUerId(String.valueOf(tableSearchService.getTotalUserNumber()+1));
+            registerDto.setCreateTime(CreateTimeUtils.genCreateTime());
+            userHandlesService.register(registerDto);
+        }
+        return new ModelAndView(new RedirectView("http://localhost:4200/"));
+    }
+
+    //login in
     @Log("login in")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Boolean LoginResult(LoginTryDto loginTryDto){
@@ -39,40 +74,19 @@ public class UserController {
         System.out.println("Fail");
         return false;
     }
-    @Log("register user")
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String register(RegisterDto registerDto){
-        if(tableSearchService.emailUsed(registerDto.getEmail())){
-            return "Sorry, email is used";
-        }else{
-            registerDto.setUerId(String.valueOf(tableSearchService.getTotalUserNumber()+1));
-            registerDto.setCreateTime(CreateTimeUtils.genCreateTime());
-            userHandlesService.register(registerDto);
-        }
-        return "Register succeed!";
-    }
 
-    @Log("reset password")
-    @RequestMapping(value = "/resetPwd", method = RequestMethod.POST)
-    public String resetPwd(String newPwd){
-        userHandlesService.resetPwd(newPwd);
-        return "Reset Succeed!";
-    }
-
-    @Log("change User Name")
-    @RequestMapping(value = "/changeUserName", method = RequestMethod.POST)
-    public String changeUserName(String newName){
-        userHandlesService.changeUserName(newName);
-        return "Change Name Succeed!";
-    }
-
+    //Sign out
     @Log("sign out")
     @RequestMapping(path = "/signOut")
     public void signOut(){
         userHandlesService.signOut();
     }
-    //user to recipeTable-----------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
+    //3. create recipe
+    //4. see myself published recipe
+    //5. delete my recipe
 
+    //create recipe
     @Log("create recipe")
     @RequestMapping(value = "/createRecipe", method = RequestMethod.POST)
     public String createRecipe(CreateRecipeDto createRecipe){
@@ -82,45 +96,55 @@ public class UserController {
         return  "done";
     }
 
-    @Log("get follower list")
-    @GetMapping(path = "/followerList/{userId}")
-    public List<UserDto> getFollowerList(@PathVariable("userId") String userId){
-        return userHandlesService.getFollowerList(userId);
-    }
-
-    @Log("get publisher list")
-    @GetMapping(path = "/publisherList/{userId}")
-    public List<UserDto> getPublisherList(@PathVariable("userId") String userId){
-        return userHandlesService.getPublisherList(userId);
-    }
-
-    @Log("delete recipe")
-    @GetMapping(path = "/deleteRecipe/{recipeId}")
-    public String deleteRecipe(@PathVariable("recipeId") String recipeId){
-        userHandlesService.deleteRecipe(recipeId);
-        return "Delete Succeed!";
-    }
-
+    //see myself published recipe
     @Log("get user recipe list")
     @GetMapping(path = "/recipeList/{userId}")
     public List<RecipeDto> getAllRecipesByUserId(@PathVariable("userId") String userId){
         return  tableSearchService.getAllRecipesByUserId(userId);
     }
 
-    @Log("get subscribelist")
-    @GetMapping(path = "/subscribeList/{userId}")
-    public  List<RecipeDto> getAllSubscribeRecipes(@PathVariable("userId") String userId){
-        return  userHandlesService.getAllSubscribeRecipes(userId);
+    // delete recipe Done
+    @Log("delete recipe")
+    @GetMapping(path = "/deleteRecipe/{recipeId}")
+    public String deleteRecipe(@PathVariable("recipeId") String recipeId){
+        userHandlesService.deleteRecipe(recipeId);
+        return "Delete Succeed!";
+    }
+    //------------------------------------------------------------------------------------------------------------------
+    //6. see my follower
+
+    //get follower list
+    @Log("get follower list")
+    @GetMapping(path = "/followerList/{userId}")
+    public List<UserDto> getFollowerList(@PathVariable("userId") String userId){
+        return userHandlesService.getFollowerList(userId);
+    }
+    //------------------------------------------------------------------------------------------------------------------
+    //7. follow publisher
+    //8. see my followed publisher
+    //9. check this publisher is follow or not
+    //10. unfollow this publisher
+
+    // follow publisher
+
+    //get followed publisher list
+    @Log("get publisher list")
+    @GetMapping(path = "/publisherList/{userId}")
+    public List<UserDto> getPublisherList(@PathVariable("userId") String userId){
+        return userHandlesService.getPublisherList(userId);
     }
 
-    @Log("get all user")
-    @GetMapping(path = "/allUser")
-    public List<UserDto> getAllUer(){
-        return tableSearchService.getAllUsers();
-    }
+    // check this publisher is follow or not
 
+    // unfollow this publisher
 
-    //user to subscribeTable--------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
+    //11. subscribe recipe
+    //12. see my subscribe
+    //13. unsubscribe recipe
+    //14. check this recipe is subscribe or not
+
+    // subscribeRecipe
     @Log("sbuscribe")
     @GetMapping(path = "/subscribe/{recipeId}")
     public String subscribeRecipe(@PathVariable("recipeId") String recipeId){
@@ -128,7 +152,39 @@ public class UserController {
         return "Subscribed!";
     }
 
-    //user to CommentTable----------------------------------------------------------------------------------------------
+    //get all subscribe recipe Done
+    @Log("get subscribelist")
+    @GetMapping(path = "/subscribeList/{userId}")
+    public  List<RecipeDto> getAllSubscribeRecipes(@PathVariable("userId") String userId){
+        return  userHandlesService.getAllSubscribeRecipes(userId);
+    }
+
+    //unsubscribe recipe
+
+    // check this recipe is subscribe or not
+
+    //------------------------------------------------------------------------------------------------------------------
+    //15. change userName
+    //16. reset pasword
+
+    //Change userName
+    @Log("change User Name")
+    @RequestMapping(value = "/changeUserName", method = RequestMethod.POST)
+    public String changeUserName(String newName){
+        userHandlesService.changeUserName(newName);
+        return "Change Name Succeed!";
+    }
+    //Reset password
+    @Log("reset password")
+    @RequestMapping(value = "/resetPwd", method = RequestMethod.POST)
+    public String resetPwd(String newPwd){
+        userHandlesService.resetPwd(newPwd);
+        return "Reset Succeed!";
+    }
+    //------------------------------------------------------------------------------------------------------------------
+    //17. write comment
+
+    //write comment
     @Log("add comment")
     @RequestMapping(value = "/addComment", method = RequestMethod.POST)
     public String addComment(CreateCommentDto createComment){
@@ -139,9 +195,5 @@ public class UserController {
         }
         return "Add comment succeed!";
     }
-
-
-//    @GetMapping(path= "/login")
-//    public boolean loginSuccess() { return topChefUserService.isSuccess(); }
 
 }

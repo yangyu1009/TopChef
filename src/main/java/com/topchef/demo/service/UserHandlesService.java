@@ -121,6 +121,12 @@ public class UserHandlesService implements TopChefUserDao {
     }
 
     @Override
+    public void unfollowed(String userId) {
+        String sql = "delete from user_follow where p_id= ? and f_id=?";
+        jdbcTemplateObject.update(sql, userId, CurrentUser.CurrentUserId.get(0));
+    }
+
+    @Override
     public boolean subscribeOrNot(String recipeId) {
         String sql = "select * from subscribe where u_id=? and r_id=?";
         List row = jdbcTemplateObject.queryForList(sql, CurrentUser.CurrentUserId.get(0), recipeId);
@@ -144,6 +150,12 @@ public class UserHandlesService implements TopChefUserDao {
                     BeanUtils.copyProperties(recipe, dto);
                     return dto;
                 }).collect(Collectors.toList());
+    }
+
+    @Override
+    public void unsubscribe(String recipeId) {
+        String sql = "delete from subscribe where u_id=? and r_id=?";
+        jdbcTemplateObject.update(sql, CurrentUser.CurrentUserId.get(0), recipeId);
     }
 
     @Override
@@ -185,6 +197,7 @@ public class UserHandlesService implements TopChefUserDao {
         userFollowService.insert(publisherId);
     }
 
+    @Override
     public Boolean Logincheck(LoginTryDto loginTryDto) {
         String sql = "select u_id from user where email=? and password=?";
         System.out.println(loginTryDto.getEmail());
