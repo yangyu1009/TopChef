@@ -11,6 +11,7 @@ import com.topchef.demo.service.TableSearchService;
 import com.topchef.demo.service.UserHandlesService;
 import com.topchef.demo.utils.CreateTimeUtils;
 import com.topchef.demo.utils.CurrentUser;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -55,6 +56,10 @@ public class UserController {
         if(tableSearchService.emailUsed(registerDto.getEmail())){
             return new ModelAndView(new RedirectView("http://localhost:4200/register"));
         }else{
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+            String result = encoder.encode(registerDto.getPassword());
+            System.out.println(result);
+            registerDto.setPassword(result);
             registerDto.setUerId(String.valueOf(tableSearchService.getTotalUserNumber()+1));
             registerDto.setCreateTime(CreateTimeUtils.genCreateTime());
             userHandlesService.register(registerDto);

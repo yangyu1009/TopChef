@@ -6,12 +6,14 @@ import com.topchef.demo.dto.tableEntity.RecipeDto;
 import com.topchef.demo.dto.tableEntity.SubscribeDto;
 import com.topchef.demo.dto.tableEntity.UserDto;
 import com.topchef.demo.dto.tableEntity.UserFollowDto;
+import com.topchef.demo.mapper.UserMapper;
 import com.topchef.demo.repository.TopChefUserDao;
 import com.topchef.demo.utils.CreateTimeUtils;
 import com.topchef.demo.utils.CurrentUser;
 import com.topchef.demo.utils.IDUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -199,16 +201,17 @@ public class UserHandlesService implements TopChefUserDao {
 
     @Override
     public Boolean Logincheck(LoginTryDto loginTryDto) {
-        String sql = "select u_id from user where email=? and password=?";
-        System.out.println(loginTryDto.getEmail());
-        System.out.println(loginTryDto.getPassword());
-        List row = jdbcTemplateObject.queryForList(sql, loginTryDto.getEmail(), loginTryDto.getPassword());
-        if(row.size() != 0){
-            Object jf=row.get(0);
-            Map txnLog=(Map)jf;
-            //System.out.println(txnLog.get("u_id").toString());
-            CurrentUser.CurrentUserId.add(txnLog.get("u_id").toString());
-            //System.out.println(CurrentUser.getLength());
+
+        String sql = "select * from user where email=?";
+        UserDto userInfo = jdbcTemplateObject.queryForObject(sql,new Object[]{loginTryDto.getEmail()}, new UserMapper());
+
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        boolean result = encoder.matches(loginTryDto.getPassword(), userInfo.getPassword());
+
+        if(result == true){
+            CurrentUser.CurrentUserId.add(userInfo.getUserId());
+            CurrentUser.CurrentUserId.add(userInfo.getName());
+            CurrentUser.CurrentUserId.add(userInfo.getEmail());
             return true;
         }
         return false;
