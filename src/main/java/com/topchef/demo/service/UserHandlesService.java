@@ -180,7 +180,9 @@ public class UserHandlesService implements TopChefUserDao {
     @Override
     public void resetPwd(String password) {
         String sql = "update user set password = ? where u_id = ?";
-        jdbcTemplateObject.update(sql, password, CurrentUser.CurrentUserId.get(0));
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String result = encoder.encode(password);
+        jdbcTemplateObject.update(sql, result, CurrentUser.CurrentUserId.get(0));
     }
 
     @Override
